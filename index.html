@@ -15,41 +15,177 @@
 </head>
 
 <body onLoad="time()">
+	<!-- Start of Jssor Slider Script -->
+	<script src="javaScript/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script src="javaScript/jssor.slider-27.5.0.min.js" type="text/javascript"></script>
+	<script>
+	jQuery(document).ready(function ($) {
+
+		var jssor_1_SlideoTransitions = [
+			[{b:0,d:600,y:-290,e:{y:27}}],
+			[{b:0,d:1000,y:185},{b:1000,d:500,o:-1},{b:1500,d:500,o:1},{b:2000,d:1500,r:360},{b:3500,d:1000,rX:30},{b:4500,d:500,rX:-30},{b:5000,d:1000,rY:30},{b:6000,d:500,rY:-30},{b:6500,d:500,sX:1},{b:7000,d:500,sX:-1},{b:7500,d:500,sY:1},{b:8000,d:500,sY:-1},{b:8500,d:500,kX:30},{b:9000,d:500,kX:-30},{b:9500,d:500,kY:30},{b:10000,d:500,kY:-30},{b:10500,d:500,c:{x:125.00,t:-125.00}},{b:11000,d:500,c:{x:-125.00,t:125.00}}],
+			[{b:0,d:600,x:535,e:{x:27}}],
+			[{b:-1,d:1,o:-1},{b:0,d:600,o:1,e:{o:5}}],
+			[{b:-1,d:1,c:{x:250.0,t:-250.0}},{b:0,d:800,c:{x:-250.0,t:250.0},e:{c:{x:7,t:7}}}],
+			[{b:-1,d:1,o:-1},{b:0,d:600,x:-570,o:1,e:{x:6}}],
+			[{b:-1,d:1,o:-1,r:-180},{b:0,d:800,o:1,r:180,e:{r:7}}],
+			[{b:0,d:1000,y:80,e:{y:24}},{b:1000,d:1100,x:570,y:170,o:-1,r:30,sX:9,sY:9,e:{x:2,y:6,r:1,sX:5,sY:5}}],
+			[{b:2000,d:600,rY:30}],
+			[{b:0,d:500,x:-105},{b:500,d:500,x:230},{b:1000,d:500,y:-120},{b:1500,d:500,x:-70,y:120},{b:2600,d:500,y:-80},{b:3100,d:900,y:160,e:{y:24}}],
+			[{b:0,d:1000,o:-0.4,rX:2,rY:1},{b:1000,d:1000,rY:1},{b:2000,d:1000,rX:-1},{b:3000,d:1000,rY:-1},{b:4000,d:1000,o:0.4,rX:-1,rY:-1}]
+		];
+
+		var jssor_1_options = {
+			$AutoPlay: 1,
+			$Idle: 2000,
+			$CaptionSliderOptions: {
+				$Class: $JssorCaptionSlideo$,
+				$Transitions: jssor_1_SlideoTransitions,
+				$Breaks: [
+					[{d:2000,b:1000}]
+				]
+			},
+			$ArrowNavigatorOptions: {
+				$Class: $JssorArrowNavigator$
+			},
+			$BulletNavigatorOptions: {
+				$Class: $JssorBulletNavigator$
+			}
+		};
+
+		var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+		/*#region responsive code begin*/
+
+		var MAX_WIDTH = 980;
+
+		function ScaleSlider() {
+			var containerElement = jssor_1_slider.$Elmt.parentNode;
+			var containerWidth = containerElement.clientWidth;
+
+			if (containerWidth) {
+
+				var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+				jssor_1_slider.$ScaleWidth(expectedWidth);
+			}
+			else {
+				window.setTimeout(ScaleSlider, 30);
+			}
+		}
+
+		ScaleSlider();
+
+		$(window).bind("load", ScaleSlider);
+		$(window).bind("resize", ScaleSlider);
+		$(window).bind("orientationchange", ScaleSlider);
+		/*#endregion responsive code end*/
+	});
+	</script>
+	<!-- End of Jssor Slider Script -->
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-5">
 				<span id="timefromaday"></span>
 			</div>
 			<div class="col-sm-5">
-				<span>Test</span>
+				<!-- Start of Carousel -->
+				<div id="jssor_1" name="slider" style="position:relative;margin:0 auto;top:0px;left:0px;width:411px;height:548px;overflow:hidden;">
+					<!-- Loading Screen -->
+					<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+						<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/spin.svg" />
+					</div>
+					<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:411px;height:548px;overflow:hidden;">
+						<!-- 1 -->
+						<div data-fillmode="5">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1On2AXH_SHG1NY1KakOpxY6JXt9BSrmCA/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1On2AXH_SHG1NY1KakOpxY6JXt9BSrmCA" /></span>
+						</div>
+						<!-- 2 -->
+						<div data-fillmode="5">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1cgaddZivxJ_uuyw0oylVywxFS9OUoVoN/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1cgaddZivxJ_uuyw0oylVywxFS9OUoVoN" /></span>
+						</div>
+						<!-- 3 -->
+						<div data-fillmode="5">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1IzlpNiOy4etiKKB8vbNB3NTo9W77Znjm/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1IzlpNiOy4etiKKB8vbNB3NTo9W77Znjm" /></span>
+						</div>
+						<!-- 4 -->
+						<div data-fillmode="5">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1SL3_z4bzqN9d3NvVq2En474t9ohjDw8f/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1SL3_z4bzqN9d3NvVq2En474t9ohjDw8f" /></span>
+						</div>
+						<!-- 5 -->
+						<div data-fillmode="5">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1HQC0VII-UAIFvbckbx4fuX9vSC7Ny9p5/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1HQC0VII-UAIFvbckbx4fuX9vSC7Ny9p5" /></span>
+						</div>
+						<!-- 6 -->
+						<div data-fillmode="5">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1Q89pXUr0kC6U1CbYr-4EKTVGB09uCkue/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1Q89pXUr0kC6U1CbYr-4EKTVGB09uCkue" /></span>
+						</div>
+						<!-- 7 -->
+						<div data-fillmode="2">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1LGRRBFsHLM_DIE_wNTDvpLRYGzfqIya4/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1LGRRBFsHLM_DIE_wNTDvpLRYGzfqIya4" class="rotate90" /></span>
+						</div>
+						<!-- 8 -->
+						<div data-fillmode="5">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1rQVIT7UGALlZ0MG6J0-T8St4G8Lf_YOS/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1rQVIT7UGALlZ0MG6J0-T8St4G8Lf_YOS" /></span>
+						</div>
+						<!-- 9 -->
+						<div data-fillmode="5">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1shLt_ulyKNPydiy_He5FZYZb2_6W230e/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1shLt_ulyKNPydiy_He5FZYZb2_6W230e" /></span>
+						</div>
+						<!-- 10 -->
+						<div data-fillmode="5">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1OMts-o6C2uVtG9Lxj9oOuQZcudTgIkv1/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1OMts-o6C2uVtG9Lxj9oOuQZcudTgIkv1" /></span>
+						</div>
+						<!-- 11 -->
+						<div data-fillmode="2">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/10Rhp-sxbunHufpGgeO__keySRSapP7Tz/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=10Rhp-sxbunHufpGgeO__keySRSapP7Tz" class="rotate90" /></span>
+						</div>
+						<!-- 12 -->
+						<div data-fillmode="2">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1wn90PSBQkold-4R34eOK6IB_BBJPSBcx/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1wn90PSBQkold-4R34eOK6IB_BBJPSBcx" /></span>
+						</div>
+						<!-- 13 -->
+						<div data-fillmode="2">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1yzmQZaKf4C1IhBP7ZUi1XRo0rCRm-pnC/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1yzmQZaKf4C1IhBP7ZUi1XRo0rCRm-pnC" /></span>
+						</div>
+						<!-- 14 -->
+						<div data-fillmode="2">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/11GsKOixUJKXPt9NrU6vpWAz38JT5SBmt/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=11GsKOixUJKXPt9NrU6vpWAz38JT5SBmt" /></span>
+						</div>
+						<!-- 15 -->
+						<div data-fillmode="2">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/11-r29BDCfM4bVX3c_QoSQ0PPgv7l-zSd/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=11-r29BDCfM4bVX3c_QoSQ0PPgv7l-zSd" /></span>
+						</div>
+						<!-- 16 -->
+						<div data-fillmode="2">
+							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1L8yOqwUsZzQm6Km17ba5diE-hcjmobHS/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1L8yOqwUsZzQm6Km17ba5diE-hcjmobHS" /></span>
+						</div>
+					</div>
+					<!-- Bullet Navigator -->
+					<div data-u="navigator" class="jssorb052" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+						<div data-u="prototype" class="i" style="width:10px;height:10px;">
+							<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+								<circle class="b" cx="8000" cy="8000" r="5800"></circle>
+							</svg>
+						</div>
+					</div>
+					<!-- Arrow Navigator -->
+					<div data-u="arrowleft" class="jssora053" style="width:55px;height:55px;top:0px;left:-10px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+						<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+							<polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+						</svg>
+					</div>
+					<div data-u="arrowright" class="jssora053" style="width:55px;height:55px;top:0px;right:-10px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+						<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+							<polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+						</svg>
+					</div>
+				</div>
+				<!-- End of Carousel -->
 			</div>
 		</div>
-		<!-- Start of Carousel -->
-		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item active" data-interval="3000">
-					<img src="https://drive.google.com/uc?id=1On2AXH_SHG1NY1KakOpxY6JXt9BSrmCA" class="d-block w-100" alt="1">
-				</div>
-				<div class="carousel-item" data-interval="3000">
-					<img src="https://drive.google.com/uc?id=1cgaddZivxJ_uuyw0oylVywxFS9OUoVoN" class="d-block w-100" alt="2">
-				</div>
-				<div class="carousel-item" data-interval="3000">
-					<img src="https://drive.google.com/uc?id=1IzlpNiOy4etiKKB8vbNB3NTo9W77Znjm" class="d-block w-100" alt="3">
-				</div>
-			</div>
-			<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev" style="top: 50%; bottom: 50%">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next" style="top: 50%; bottom: 50%">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-		<!-- End of Carousel -->
 	</div>
 
-<!-- Script -->
 <!-- Start of Bootstrap javaScript -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
