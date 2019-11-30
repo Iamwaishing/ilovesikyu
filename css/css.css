@@ -2,6 +2,10 @@ body {
 	font-family:Microsoft JhengHei;
 }
 
+.center {
+	text-align: center;
+}
+
 /* Start of jssor slider css */
 .jssorl-009-spin img {
 	animation-name: jssorl-009-spin;
