@@ -14,7 +14,7 @@
 <title>偉誠與悉瑜 - 主頁</title>
 </head>
 
-<body onLoad="time()">
+<body>
 	<!-- Start of Jssor Slider Script -->
 	<script src="javaScript/jquery-1.11.3.min.js" type="text/javascript"></script>
 	<script src="javaScript/jssor.slider-27.5.0.min.js" type="text/javascript"></script>
@@ -196,5 +196,16 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- End of Bootstrap javaScript -->
+
+<!-- Start of Moment count time Script -->
+<script>
+moment.locale("zh-hk"); //change to Hong Kong Time
+var now = moment(new Date()); //todays date
+var end = moment("2018-12-27"); // another date
+var duration = moment.duration(now.diff(end));
+var days = duration.asDays();
+document.getElementById("timefromaday").innerHTML = "偉誠和悉瑜在一起已經 "+Math.ceil(days)+" 天";
+</script>
+<!-- Start of Moment count time Script -->
 </body>
 </html>
