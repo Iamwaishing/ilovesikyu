@@ -67,11 +67,11 @@ nav ul li a:hover {
 		display: block;
 		width: 40px;
 		height: 40px;
-		margin: 10px;
+		margin: 10px 10px 14px 10px;
 		float: right;
 		cursor: pointer;
 		text-align: center;
-		font-size: 28px;
+		font-size: 30px;
 		color: #069370;
 	}
 	
