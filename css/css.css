@@ -71,14 +71,13 @@ nav ul li a:hover {
 		float: right;
 		cursor: pointer;
 		text-align: center;
-		font-size: 30px;
+		font-size: 28px;
 		color: #069370;
 	}
 	
 	.menu-toggle:before {
 		content: "\f0c9";
 		font-family: fontAwesome;
-		line-height: 40px;
 	}
 
 	.menu-toggle.active:before {
