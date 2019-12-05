@@ -51,8 +51,8 @@ nav ul li {
 
 nav ul li a.active,
 nav ul li a:hover {
-	background: #069370; /* Change color */
-	color: #fff; /* Change color */
+	background: #E46464; /* Change color */
+	color: #FFFFFF; /* Change color */
 	transition: 0.5s;
 }
 
@@ -72,7 +72,7 @@ nav ul li a:hover {
 		cursor: pointer;
 		text-align: center;
 		font-size: 30px;
-		color: #069370;
+		color: #E46464; /* Change color */
 	}
 	
 	.menu-toggle:before {
