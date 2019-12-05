@@ -13,7 +13,7 @@ header {
 	max-width: 1220px;
 	margin: 20px auto;
 	padding: 10px;
-	background: #fff;
+	background: #FFF;
 	box-sizing: border-box;
 	border-radius: 4px;
 	box-shadow: 0 2px 5px rgba(0,0,0,.2);
@@ -105,6 +105,11 @@ nav ul li a:hover {
 	.navbars.active ul li a{
 		margin: 0;
 	}
+
+	.timefromaday {
+	font-weight: bold;
+	font-size: 20px;
+}
 }
 /* End of Nav bar css */
 
