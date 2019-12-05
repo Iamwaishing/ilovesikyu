@@ -1,5 +1,10 @@
 body {
-	font-family:Microsoft JhengHei;
+	font-family: '微軟正黑體'!important;
+}
+
+.timefromaday {
+	font-weight: bold;
+	font-size: 30px;
 }
 
 /* Start of Nav bar css */
