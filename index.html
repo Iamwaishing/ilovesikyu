@@ -15,10 +15,34 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <!-- Moment javaScript -->
 <script src="javaScript/moment-with-locales.js" type="text/javascript"></script>
+<!-- Start of GIF Style and Script -->
+<style>
+	.none {
+		display: none;
+	}
+</style>
+<script src="javaScript/b64.js"></script>
+<script src="javaScript/LZWEncoder.js"></script>
+<script src="javaScript/NeuQuant.js"></script>
+<script src="javaScript/GifEncoder.js"></script>
+<script>
+moment.locale("zh-hk"); //change to Hong Kong Time
+var now = moment(new Date()); //todays date
+var end = moment("2018-12-27"); // another date
+var duration = moment.duration(now.diff(end));
+var days = duration.asDays();
+
+function giftext(){
+	document.getElementById("1").setAttribute('value', '偉誠同悉瑜');
+	document.getElementById("2").setAttribute('value', '係一齊已經');
+	document.getElementById("3").setAttribute('value', Math.ceil(days)+'天');
+}
+</script>
+<!-- End of GIF Style and Script -->
 <title>偉誠和悉瑜 - 主頁</title>
 </head>
 
-<body>
+<body onload="giftext()" id="bodyy">
 	<header>
 		<a href="index.html" class="logo"><img src="images/icon.png" alt="icon" width="170px"></a>
 		<div class="menu-toggle"></div>
@@ -108,8 +132,15 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 center">
 				<!-- Text here -->
+				<!-- Start of GIF TEXT -->
+				<img id="result">
+					<input class="none" id="1" type="text" maxlength="6" size="8" value="">
+					<input class="none" id="2" type="text" maxlength="6" size="8" value="">
+					<input class="none" id="3" type="text" maxlength="6" size="8" value="">
+				<canvas id="canvas" style="display:none"></canvas>
+				<!-- Start of GIF TEXT -->
 			</div>
 			<div class="col-md-4">
 				<div class="center">
@@ -228,6 +259,12 @@ var end = moment("2018-12-27"); // another date
 var duration = moment.duration(now.diff(end));
 var days = duration.asDays();
 document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已經 "+Math.ceil(days)+" 天";
+
+function giftext(){
+	document.getElementById("1").setAttribute('value', '偉誠同悉瑜');
+	document.getElementById("2").setAttribute('value', '係一齊已經');
+	document.getElementById("3").setAttribute('value', Math.ceil(days)+'天');
+}
 </script>
 <!-- End of Moment count time Script -->
 <!-- Start of Nav bar Script -->
@@ -241,5 +278,91 @@ document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已
 	})
 </script>
 <!-- End of Nav bar Script -->
+<!-- Start of GIF Script -->
+<script>
+	var pig = ['images/wine1.png', 'images/wine2.png', 'images/wine3.png', 'images/wine4.png'];
+	var selected = pig;
+	var selectn = 0;
+	var speed = 0.2;
+	var delay = 1.5;
+
+	generateGIF(speed, delay, pig);
+
+	$( document ).ready(() => generateGIF(speed, delay, selected))
+
+	function generateGIF(pace, delay, base) {
+		selected = base;
+		var textArray = $("input").map(function() {
+			return ($(this).val() == '') ? '  <span></span>  ' : $(this).val()
+		}).get();
+		var delayInSeconds = pace;
+		var encoder = new GIFEncoder();
+		encoder.setTransparent(0x00FF00);
+		encoder.setRepeat(0);
+		encoder.start();
+
+		var circle_canvas = document.getElementById("canvas");
+		var context = circle_canvas.getContext("2d");
+
+		// Draw Image function
+		var img = [];
+
+		var imagesOK = 0;
+		loadAllImages(start);
+
+		function loadAllImages(callback) {
+
+			base.forEach(function(e) {
+				var pic = new Image();
+				img.push(pic);
+				pic.onload = function() {
+					circle_canvas.width = this.width;
+					circle_canvas.height = this.height;
+					imagesOK++;
+					if (imagesOK >= base.length) {
+						callback();
+					}
+				};
+				pic.onerror = function() {
+					console.log("image load failed");
+				}
+				pic.crossOrigin = "anonymous";
+				pic.src = e;
+			})
+		}
+
+		function start() {
+			/*circle_canvas.width = 101;
+			circle_canvas.height = 51;*/
+			textArray.forEach(function(e, i) {
+				img.forEach(function(v, n) {
+
+					(e.split("").length == 1 && n == img.length - 1) ? encoder.setDelay(delay * 500): encoder.setDelay(delayInSeconds * 500);
+					context.fillStyle = "rgb(0,255,0)";
+					context.fillRect(0, 0, circle_canvas.width, circle_canvas.height);
+					context.drawImage(v, 0, 0, circle_canvas.width, circle_canvas.height);
+					context.fillStyle = "#000000";
+					//context.font = $("#fontBold").val()+" 14px '"+$("#fontSelect").val()+"', sans-serif";
+					context.font = "14px 'Helvetica Neue,Helvetica,Arial,Microsoft JhengHei,sans-serif'";
+					if (n == img.length - 1) {
+						e.split("").forEach(function(f, o) {
+							context.fillText(f, (80 / e.length) * o + ((80 / e.length) / 2 + 3), 21)
+							encoder.addFrame(context);
+							if (o == e.split("").length - 2) encoder.setDelay(delay * 500);
+						});
+					} else {
+						encoder.addFrame(context);
+					}
+
+				})
+			})
+
+			encoder.finish();
+			document.querySelector('#result').src = 'data:image/gif;base64,' + encode64(encoder.stream().getData())
+		}
+
+	}
+</script>
+<!-- End of GIF Script -->
 </body>
 </html>
