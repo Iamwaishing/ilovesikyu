@@ -333,7 +333,7 @@ function outsideClick(e) {
         canvas.height = H;
     }
 
-    function InitializeConfetti() {
+    setTimeout(function InitializeConfetti() {
         particles = [];
         animationComplete = false;
         for (var i = 0; i < mp; i++) {
@@ -341,7 +341,7 @@ function outsideClick(e) {
             particles.push(new confettiParticle(particleColor));
         }
         StartConfetti();
-    }
+    }, 3000);
 
     function Draw() {
         ctx.clearRect(0, 0, W, H);
