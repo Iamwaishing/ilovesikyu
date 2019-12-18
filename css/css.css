@@ -108,7 +108,7 @@ nav ul li a:hover {
 
 	.timefromaday {
 		font-weight: bold;
-		font-size: 20px;
+		font-size: 25px;
 	}
 }
 /* End of Nav bar css */
@@ -241,3 +241,10 @@ canvas {
 	height: 100%;
 }
 /* End of confetti css */
+@media (max-width: 768px) {
+	.centercarousel {
+		text-align: center;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
