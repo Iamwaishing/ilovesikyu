@@ -185,7 +185,7 @@ nav ul li a:hover {
 }
 
 .modal-body {
-	padding: 10px 20px !important;
+	padding: 0px !important;
 	background-image: url("../images/bg.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -225,3 +225,20 @@ nav ul li a:hover {
 	}
 }
 /* End of popup css */
+
+/* Start of confetti css */
+canvas {
+	display: block;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+}
+.popuptop {
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+}
+.confettiheight {
+	height: 100%;
+}
+/* End of confetti css */
