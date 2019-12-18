@@ -216,11 +216,12 @@ nav ul li a:hover {
 		opacity: 1;
 	}
 }
-/* End of popup css */
-@media (max-width: 768px) {
+
+@media (max-width: 769px) {
 	.modal-content {
 		margin: 5% 5%!important;
 		width: 90%!important;
-		height: 90vh;
+		height: 93vh;
 	}
 }
+/* End of popup css */
