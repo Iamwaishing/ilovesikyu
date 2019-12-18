@@ -105,9 +105,7 @@
 	<!-- End of Jssor Slider Script -->
 	<div class="container">
 		<div class="row">
-			<div class="col-md center timefromaday">
-				<span id="timefromaday"></span>
-			</div>
+			
 		</div>
 		<div class="row">
 			<div class="col-md-4">
@@ -211,7 +209,7 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				Text here
+				<!--Content here-->
 			</div>
 		</div>
 	</div>
@@ -222,16 +220,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- End of Bootstrap javaScript -->
 
-<!-- Start of Moment count time Script -->
-<script>
-moment.locale("zh-hk"); //change to Hong Kong Time
-var now = moment(new Date()); //todays date
-var end = moment("2018-12-27"); // another date
-var duration = moment.duration(now.diff(end));
-var days = duration.asDays();
-document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已經 "+Math.ceil(days)+" 天";
-</script>
-<!-- End of Moment count time Script -->
 <!-- Start of Nav bar Script -->
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script type="text/javascript">
@@ -251,7 +239,9 @@ document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已
 				<p><span class="close">&times;</span></p><br><br>
 				<h1><strong>一周年快樂!</strong></h1><br>
 				<h1><strong>Happy 1<sup>st</sup> Anniversary!</strong></h1><br>
-				Text here
+				<div class="center timefromaday">
+					<span id="timefromaday"></span>
+				</div>
 			</div>
 			<div class="confettiheight">
 				<canvas id="canvas"></canvas> <!-- 屑花 confetti-->
@@ -260,6 +250,17 @@ document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已
 	</div>
 </div>
 <!-- End of popup -->
+
+<!-- Start of Moment count time Script -->
+<script>
+moment.locale("zh-hk"); //change to Hong Kong Time
+var now = moment(new Date()); //todays date
+var end = moment("2018-12-27"); // another date
+var duration = moment.duration(now.diff(end));
+var days = duration.asDays();
+document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已經 "+Math.ceil(days)+" 天";
+</script>
+<!-- End of Moment count time Script -->
 
 <!-- Start of popup script -->
 <script>
