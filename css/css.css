@@ -197,7 +197,7 @@ nav ul li a:hover {
 .close {
 	color: #ccc;
 	float: right;
-	font-size: 30px;
+	font-size: 60px!important;
 	color: #fff;
 }
 
