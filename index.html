@@ -22,7 +22,7 @@
 	<header>
 		<a href="index.html" class="logo"><img src="images/icon.png" alt="icon" width="170px"></a>
 		<div class="menu-toggle"></div>
-		<nav class="navbars">
+		<nav class="navbars" id="nav">
 			<ul>
 				<li>&nbsp;</li>
 				<li><a href="index.html">主頁</a></li>
@@ -245,8 +245,11 @@ document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已
 <div id="my-modal" class="modal">
 	<div class="modal-content">
 		<div class="modal-body">
-			<p><span class="close">&times;</span></p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velitrepudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemocommodi ab.</p>
+			<div class="center">
+				<p><span class="close">&times;</span></p><br>
+				<p><h1><strong>一周年快樂!</strong></h1></p>
+			</div>
+		<img src="images/icon.png" alt="img" width="50%">
 		</div>
 	</div>
 </div>
@@ -257,9 +260,10 @@ document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已
 // Get DOM Elements
 const modal = document.querySelector('#my-modal');
 const closeBtn = document.querySelector('.close');
+const home = document.querySelector('#nav');
 
 // Events
-window.addEventListener('load', openModal);
+document.addEventListener('DOMContentLoaded', openModal);
 closeBtn.addEventListener('click', closeModal);
 window.addEventListener('click', outsideClick);
 
