@@ -18,7 +18,7 @@
 <!-- Confetti Script -->
 <script src="jquery-git.js"></script>
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>偉誠和悉瑜 - 主頁</title>
+<title>偉誠和悉瑜 - 相片</title>
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
@@ -107,131 +107,81 @@
 	</script>
 	<!-- End of Jssor Slider Script -->
 	<!-- InstanceBeginEditable name="content" -->
+	<div style="text-align: center;">
+	<!-- 以下係option -->
+	<script>
+		function populate(s1,s2){
+			var s1 = document.getElementById(s1);
+			var s2 = document.getElementById(s2);
+			s2.innerHTML = "";
+			if(s1.value == "2018"){
+				var optionArray = 
+						[/*01*/"https://drive.google.com/embeddedfolderview?id=1qAY3rxRSXeaVT8qEWPuYb3pgqowfKIyC#grid|2018年12月24日 平安夜約會",
+						 /*02*/"https://drive.google.com/embeddedfolderview?id=14bOcHWseUZqXtKWMOs9uppiypFuANpAm#grid|2018年12月27日 第一日",
+						 /*03*/"https://drive.google.com/embeddedfolderview?id=1dDdl2mifuHuBrmKw6pNbplZY-HYX39Ia#grid|2018年12月31日 奧海城倒數"
+						];
+			} else if(s1.value == "2019"){
+				var optionArray = 
+						[/*01*/"https://drive.google.com/embeddedfolderview?id=1oiJ_m2aByU8k48XytEtIZgfVvIjoC59E#grid|2019年1月9日 赤柱",
+						 /*02*/"https://drive.google.com/embeddedfolderview?id=1yeRoy0DQj20-0bcKFsrGXhJupst-7CuA#grid|2019年1月13日 嘉頓山",
+						 /*03*/"https://drive.google.com/embeddedfolderview?id=1teoMpaYymC94t0Unptdov-jKrTVwM000#grid|2019年1月23日 跑完步見",
+						 /*04*/"https://drive.google.com/embeddedfolderview?id=1-sNkgto36j0drCdZHDHDMO0ZUpJVocyC#grid|2019年1月27日 一個月",
+						 /*05*/"https://drive.google.com/embeddedfolderview?id=16sCHLGXCl0il-sZJNJb7zYWJnr3fl6DH#grid|2019年2月6日 行灣仔峽道&睇煙花",
+						 /*06*/"https://drive.google.com/embeddedfolderview?id=1C2Gv2hlHtb3dNslJQnw4gzAaGclDlUla#grid|2019年2月7日 智選假日酒店",
+						 /*07*/"https://drive.google.com/embeddedfolderview?id=1SbIuWpYEOPBurGOXMKOQNZYvAVsN2Ehv#grid|2019年2月9日 旺角影貼紙相",
+						 /*08*/"https://drive.google.com/embeddedfolderview?id=1OGQIJxAkILl-gklXRNJNAd-iljVOzv4I#grid|2019年2月14日 情人節佐敦谷野餐",
+						 /*09*/"https://drive.google.com/embeddedfolderview?id=1ZQ_WZ_zX0lDPxLKLvtwD4xy3RK5Y_FVJ#grid|2019年2月15日 佢生日食自助餐",
+						 /*10*/"https://drive.google.com/embeddedfolderview?id=1WRk9_fpxfQqHdQ3gqbCiksNVpoLq3vqo#grid|2019年3月3日 悉瑜屋企過夜",
+						 /*11*/"https://drive.google.com/embeddedfolderview?id=1OokWCB7SRokHa_0rdFXFq-R8fjukyQSr#grid|2019年3月27日 三個月去長洲",
+						 /*12*/"https://drive.google.com/embeddedfolderview?id=1gtPc0aQ0U-FtBYjPCHcIbv4M9bBXc7G3#grid|2019年4月10日 冇去跑步去見寶寶",
+						 /*13*/"https://drive.google.com/embeddedfolderview?id=1l1bDYfB_oZdmr_yr441y9z-rXZhhvpVR#grid|2019年5月9日 考完試見寶寶",
+						 /*14*/"https://drive.google.com/embeddedfolderview?id=1_um6pX2E9QS_4uvbytHnMlsvsvphpX4O#grid|2019年5月22日 澳門一日遊",
+						 /*15*/"https://drive.google.com/embeddedfolderview?id=1SBEVUqkXmW0FRXBew-WVovMZSQrPGNrD#grid|2019年7月1日 浪漫此刻@祝福閣",
+						 /*16*/"https://drive.google.com/embeddedfolderview?id=1e5MpDe2VQlOgesdHDJQ7xvswYHyEVRbu#grid|2019年7月27日 七個月食放題",
+						 /*17*/"https://drive.google.com/embeddedfolderview?id=1BzHlQx3tQ6MJvbF8dOh_GMVotDzYQYMY#grid|2019年8月18日 維園集會",
+						 /*18*/"https://drive.google.com/embeddedfolderview?id=1YxIWsA5I3NK751bM4-xxlCHDojX3s73Z#grid|2019年8月21日 嚟我屋企食飯",
+						 /*19*/"https://drive.google.com/embeddedfolderview?id=1QnL3MJyb2eL3HauOAR_pSfmvd0lmpIjh#grid|2019年8月24日 沙田馬場返工",
+						 /*20*/"https://drive.google.com/embeddedfolderview?id=1Qb_5uZwMZlTvTTke2qK7sPthUPnxcvKd#grid|2019年8月27日 八個月單車遊",
+						 /*21*/"https://drive.google.com/embeddedfolderview?id=1j3ytEh7WGzFCOuypgnh2EBOb0uoVpcJT#grid|2019年9月1日 佢屋企過夜之後一日",
+						 /*22*/"https://drive.google.com/embeddedfolderview?id=1HYv7wUY3wM7BSPgKdp30QlzMnxRu72YU#grid|2019年9月8日 提早送生日禮物",
+						 /*23*/"https://drive.google.com/embeddedfolderview?id=1wYXMsZo-Pwna1YDAPbIigirzP1_-sLU4#grid|2019年9月10日 我生日食自助餐",
+						 /*24*/"https://drive.google.com/embeddedfolderview?id=1j3T5CHiluyLrIb2YuITR9z-_IqcVGFix#grid|2019年9月15日 去銅鑼灣行街",
+						 /*25*/"https://drive.google.com/embeddedfolderview?id=1DkdzBHBZsMJHrqDET3Yf9Bv8Qst_6u6V#grid|2019年9月25日 我剪頭髮後合照",
+						 /*26*/"https://drive.google.com/embeddedfolderview?id=1ElbzdQzg8pXBiGqmzYK0l50hUbvsQUzq#grid|2019年9月27日 九個月慶祝",
+						 /*27*/"https://drive.google.com/embeddedfolderview?id=1LeYVP6yBuihUKrOupuBRjncvUfzxNyGF#grid|2019年10月20日 3日2夜陪悉瑜",
+						 /*28*/"https://drive.google.com/embeddedfolderview?id=1NCQ0QbYR1PU5_AGPHCZAQpxTu1Axozuk#grid|2019年10月27日 十個月",
+						 /*29*/"https://drive.google.com/embeddedfolderview?id=1NKHHv08ouVKY3NZfn0k3hQ49vmc_Eu8X#grid|2019年11月16日 我剪髮後拍攝",
+						 /*30*/"https://drive.google.com/embeddedfolderview?id=1_3n58gFhlUfkrPJDRs-27UPITbTWsTBm#grid|2019年11月24日 區議會投票日"
+						];
+			}
+			var newOption1 = document.createElement("option");
+			newOption1.value = "";
+			newOption1.innerHTML = "日期";
+			newOption1.disabled = "disabled";
+			newOption1.selected = "selected";
+			newOption1.hidden = "hidden";
+			s2.options.add(newOption1);				
+			for(var option in optionArray){
+				var pair = optionArray[option].split("|");
+				var newOption = document.createElement("option");
+				newOption.value = pair[0];
+				newOption.innerHTML = pair[1];
+				s2.options.add(newOption);
+			}
+	}
+	</script>
+	<p>
+		<select id="slct1" name="slct1" onchange="populate(this.id,'slct2');document.getElementById('slct2').hidden = false">
+			<option disabled selected hidden>年份</option>
+			<option value="2018">2018</option>
+			<option value="2019">2019</option>
+		</select>
+		<select id="slct2" name="slct2" onchange="document.getElementById('youriframe').src = this.options[this.selectedIndex].value;show()" hidden></select>
+	</p>
+	<!-- 以上係option -->
+	</div>
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12 center timefromaday">
-				<span id="timefromaday"></span>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-2">
-				<!-- Text here -->
-			</div>
-			<div class="col-md-4">
-				<br>
-				<div>
-					生活寫照<a href="photos.html" style="float: right;">更多</a>
-				</div>
-				<div class="center">
-				<!-- Start of Carousel -->
-				<div id="jssor_1" name="slider" style="position:relative;margin:0 auto;top:0px;left:0px;width:400px;height:533px;">
-					<!-- Loading Screen -->
-					<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-						<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/spin.svg" alt="spin"/>
-					</div>
-					<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:400px;height:533px;">
-						<!-- 1 -->
-						<div data-fillmode="5">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1On2AXH_SHG1NY1KakOpxY6JXt9BSrmCA/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1On2AXH_SHG1NY1KakOpxY6JXt9BSrmCA" alt="1"/></span>
-						</div>
-						<!-- 2 -->
-						<div data-fillmode="5">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1cgaddZivxJ_uuyw0oylVywxFS9OUoVoN/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1cgaddZivxJ_uuyw0oylVywxFS9OUoVoN" alt="2"/></span>
-						</div>
-						<!-- 3 -->
-						<div data-fillmode="5">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1IzlpNiOy4etiKKB8vbNB3NTo9W77Znjm/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1IzlpNiOy4etiKKB8vbNB3NTo9W77Znjm" alt="3"/></span>
-						</div>
-						<!-- 4 -->
-						<div data-fillmode="5">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1SL3_z4bzqN9d3NvVq2En474t9ohjDw8f/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1SL3_z4bzqN9d3NvVq2En474t9ohjDw8f" alt="4"/></span>
-						</div>
-						<!-- 5 -->
-						<div data-fillmode="5">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1HQC0VII-UAIFvbckbx4fuX9vSC7Ny9p5/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1HQC0VII-UAIFvbckbx4fuX9vSC7Ny9p5" alt="5"/></span>
-						</div>
-						<!-- 6 -->
-						<div data-fillmode="5">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1Q89pXUr0kC6U1CbYr-4EKTVGB09uCkue/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1Q89pXUr0kC6U1CbYr-4EKTVGB09uCkue" alt="6"/></span>
-						</div>
-						<!-- 7 -->
-						<div data-fillmode="2">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1LGRRBFsHLM_DIE_wNTDvpLRYGzfqIya4/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1LGRRBFsHLM_DIE_wNTDvpLRYGzfqIya4" alt="7" class="rotate90" /></span>
-						</div>
-						<!-- 8 -->
-						<div data-fillmode="5">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1rQVIT7UGALlZ0MG6J0-T8St4G8Lf_YOS/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1rQVIT7UGALlZ0MG6J0-T8St4G8Lf_YOS" alt="8"/></span>
-						</div>
-						<!-- 9 -->
-						<div data-fillmode="5">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1shLt_ulyKNPydiy_He5FZYZb2_6W230e/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1shLt_ulyKNPydiy_He5FZYZb2_6W230e" alt="9"/></span>
-						</div>
-						<!-- 10 -->
-						<div data-fillmode="5">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1OMts-o6C2uVtG9Lxj9oOuQZcudTgIkv1/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1OMts-o6C2uVtG9Lxj9oOuQZcudTgIkv1" alt="10"/></span>
-						</div>
-						<!-- 11 -->
-						<div data-fillmode="2">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/10Rhp-sxbunHufpGgeO__keySRSapP7Tz/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=10Rhp-sxbunHufpGgeO__keySRSapP7Tz" alt="11" class="rotate90" /></span>
-						</div>
-						<!-- 12 -->
-						<div data-fillmode="2">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1wn90PSBQkold-4R34eOK6IB_BBJPSBcx/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1wn90PSBQkold-4R34eOK6IB_BBJPSBcx" alt="12"/></span>
-						</div>
-						<!-- 13 -->
-						<div data-fillmode="2">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1yzmQZaKf4C1IhBP7ZUi1XRo0rCRm-pnC/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1yzmQZaKf4C1IhBP7ZUi1XRo0rCRm-pnC" alt="13"/></span>
-						</div>
-						<!-- 14 -->
-						<div data-fillmode="2">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/11GsKOixUJKXPt9NrU6vpWAz38JT5SBmt/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=11GsKOixUJKXPt9NrU6vpWAz38JT5SBmt" alt="14"/></span>
-						</div>
-						<!-- 15 -->
-						<div data-fillmode="2">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/11-r29BDCfM4bVX3c_QoSQ0PPgv7l-zSd/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=11-r29BDCfM4bVX3c_QoSQ0PPgv7l-zSd" alt="15"/></span>
-						</div>
-						<!-- 16 -->
-						<div data-fillmode="2">
-							<span style="cursor:pointer;" onClick="javascript:window.open('https://drive.google.com/file/d/1L8yOqwUsZzQm6Km17ba5diE-hcjmobHS/view?usp=sharing','Windows','toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=no');return false"><img data-u="image" src="https://drive.google.com/uc?id=1L8yOqwUsZzQm6Km17ba5diE-hcjmobHS" alt="16"/></span>
-						</div>
-					</div>
-					<!-- Bullet Navigator -->
-					<div data-u="navigator" class="jssorb052" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
-						<div data-u="prototype" class="i" style="width:10px;height:10px;">
-							<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-								<circle class="b" cx="8000" cy="8000" r="5800"></circle>
-							</svg>
-						</div>
-					</div>
-					<!-- Arrow Navigator -->
-					<div data-u="arrowleft" class="jssora053" style="width:55px;height:55px;top:0px;left:-10px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-						<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-							<polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
-						</svg>
-					</div>
-					<div data-u="arrowright" class="jssora053" style="width:55px;height:55px;top:0px;right:-10px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-						<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-							<polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
-						</svg>
-					</div>
-				</div>
-				<!-- End of Carousel -->
-				</div>
-			</div>
-			<div class="col-md-4">
-				<br>
-				<div>
-					影片<a href="video.html" style="float: right;">更多</a>
-				</div>
-				<div class="iframe-container">
-					<iframe name="youtube" src="https://www.youtube.com/embed/B8M8TJnlkK4" width="100%" height="30%" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<br>
-			</div>
-			<div class="col-md-2">
-				<!-- Text here -->
-			</div>
-		</div>
+		<iframe id="youriframe" width="100%" frameborder="0" class="frameheight" style="background-color:rgba(0,0,0,0.00); "></iframe>
 	</div>
 	<!-- InstanceEndEditable -->
 
@@ -253,22 +203,6 @@
 </script>
 <!-- End of Nav bar Script -->
 <!-- InstanceBeginEditable name="content2" -->
-<!-- Start of popup -->
-<div id="my-modal" class="modal">
-	<div class="modal-content">
-		<div class="modal-body">
-			<div class="center popuptop">
-				<p><span class="close">&times;</span></p><br><br>
-				<h1><strong>一周年快樂!</strong></h1><br>
-				<h1><strong>Happy 1<sup>st</sup> Anniversary!</strong></h1><br>
-			</div>
-			<div class="confettiheight">
-				<canvas id="canvas"></canvas> <!-- 屑花 confetti-->
-			</div>
-		</div>
-	</div>
-</div>
-<!-- End of popup -->
 <!-- InstanceEndEditable -->
 
 <!-- Start of Moment count time Script -->

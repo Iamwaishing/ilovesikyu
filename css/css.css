@@ -257,3 +257,6 @@ canvas {
 	height: 100%;
 }
 /* End of youtube player */
+.frameheight{
+	height: calc(88vh - 95px) !important;
+}
