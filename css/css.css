@@ -209,15 +209,15 @@ nav ul li a:hover {
 }
 
 .popuptop {
-	z-index: 1;
-	position: absolute;
-	width: 100%;
+	z-index: 1!important;
+	position: absolute!important;
+	width: 100%!important;
 }
 
 .popupclose {
-	z-index: 2;
-	position: absolute;
-	width: 100%;
+	z-index: 2!important;
+	position: absolute!important;
+	width: 100%!important;
 }
 
 @keyframes modalopen {
