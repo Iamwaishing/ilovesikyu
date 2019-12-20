@@ -186,7 +186,7 @@ nav ul li a:hover {
 
 .modal-body {
 	padding: 0px !important;
-	background-image: url("../images/bg.jpg");
+	background-image: url("../images/bg2.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -221,6 +221,10 @@ nav ul li a:hover {
 	.modal-content {
 		margin: 5% 5%!important;
 		width: 90%!important;
+	}
+	
+	.popupbg {
+		width: 100%;
 	}
 }
 /* End of popup css */

@@ -407,7 +407,7 @@ function outsideClick(e) {
             particles.push(new confettiParticle(particleColor));
         }
         StartConfetti();
-    }, 3000);
+    }, 2000);
 
     function Draw() {
         ctx.clearRect(0, 0, W, H);
