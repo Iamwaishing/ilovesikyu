@@ -208,6 +208,18 @@ nav ul li a:hover {
 	cursor: pointer;
 }
 
+.popuptop {
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+}
+
+.popupclose {
+	z-index: 2;
+	position: absolute;
+	width: 100%;
+}
+
 @keyframes modalopen {
 	from {
 		opacity: 0;
@@ -236,11 +248,7 @@ canvas {
 	width: 100%;
 	height: 100%;
 }
-.popuptop {
-	z-index: 1;
-	position: absolute;
-	width: 100%;
-}
+
 .confettiheight {
 	height: 100%;
 }
