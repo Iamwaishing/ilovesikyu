@@ -88,7 +88,13 @@
 						 /*30*/"https://drive.google.com/embeddedfolderview?id=1_3n58gFhlUfkrPJDRs-27UPITbTWsTBm#grid|2019年11月24日 區議會投票日",
 						 /*31*/"https://drive.google.com/embeddedfolderview?id=15YGZZEvnAXyiPMReSqMf-bgGN1Xy3Sxl#grid|2019年12月23日 悉瑜整證件",
 						 /*32*/"https://drive.google.com/embeddedfolderview?id=1Qf73szKYBSMvP32cvKO0VC0nVCvz3Pb4#grid|2019年12月24日 平安夜",
-						 /*33*/"https://drive.google.com/embeddedfolderview?id=1MPoRpUjy7q64wsz6jaR0UFxMtYb0t_oh#grid|2019年12月25日 聖誕節"
+						 /*33*/"https://drive.google.com/embeddedfolderview?id=1MPoRpUjy7q64wsz6jaR0UFxMtYb0t_oh#grid|2019年12月25日 聖誕節",
+						 /*34*/"https://drive.google.com/embeddedfolderview?id=1NCoN0tlKQjI01RTG9_J3lX7X-Suzmown#grid|2019年12月27日 一周年",
+						 /*35*/"https://drive.google.com/embeddedfolderview?id=1Ga_q5gHIsUkih1rVKrfoJQS59goB7rDt#grid|2019年12月31日 旺角倒數"
+						];
+			} else if(s1.value == "2020"){
+				var optionArray = 
+						[/*01*/"https://drive.google.com/embeddedfolderview?id=1aJwBxHF2D1_GMoBWagfD_Dyx0mW3ZJ8F#grid|2020年1月1日 元旦日",
 						];
 			}
 			var newOption1 = document.createElement("option");
@@ -112,6 +118,7 @@
 			<option disabled selected hidden>年份</option>
 			<option value="2018">2018</option>
 			<option value="2019">2019</option>
+			<option value="2020">2020</option>
 		</select>
 		<select id="slct2" name="slct2" onchange="document.getElementById('youriframe').src = this.options[this.selectedIndex].value;show()" hidden></select>
 	</p>
