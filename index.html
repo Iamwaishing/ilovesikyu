@@ -122,7 +122,10 @@
 			<div class="col-md-4">
 				<br>
 				<div>
-					生活寫照<a href="photos.html" style="float: right;">更多</a>
+					<img src="images/life.png" alt="title" usemap="#Map" style="width: 100%">
+					<map name="Map">
+						<area shape="rect" coords="635,42,703,85" href="photos.html" alt="map">
+					</map>
 				</div>
 				<div class="center">
 				<!-- Start of Carousel -->
@@ -230,15 +233,20 @@
 			</div>
 			<div class="col-md-4">
 				<br>
-				<div>
-					影片<a href="video.html" style="float: right;">更多</a>
-				</div>
-				<div class="iframe-container">
-					<iframe name="youtube" src="https://www.youtube.com/embed/w0u1FWi5ARA" width="100%" height="30%" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<br>
-				<div class="iframe-container">
-					<iframe name="youtube" src="https://www.youtube.com/embed/B8M8TJnlkK4" width="100%" height="30%" frameborder="0" allowfullscreen></iframe>
+				<div  style="background: #FFFFFF;">
+					<div>
+						<img src="images/vid.png" alt="title" usemap="#MapMap" style="width: 100%">
+						<map name="MapMap">
+							<area shape="rect" coords="635,42,703,85" href="video.html" alt="map">
+						</map>
+					</div>
+					<div class="iframe-container">
+						<iframe name="youtube" src="https://www.youtube.com/embed/w0u1FWi5ARA" width="100%" height="30%" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<br>
+					<div class="iframe-container">
+						<iframe name="youtube" src="https://www.youtube.com/embed/B8M8TJnlkK4" width="100%" height="30%" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
 				<br>
 			</div>
@@ -268,6 +276,7 @@
 <!-- End of Nav bar Script -->
 <!-- InstanceBeginEditable name="content2" -->
 <!-- Start of popup -->
+<!--
 <div id="my-modal" class="modal">
 	<div class="modal-content">
 		<div class="modal-body">
@@ -281,11 +290,12 @@
 				<img class="popupimg" src="images/love.png" alt="img" width="43%">
 			</div>
 			<div class="confettiheight">
-				<canvas id="canvas"></canvas> <!-- 屑花 confetti-->
+				<canvas id="canvas"></canvas>
 			</div>
 		</div>
 	</div>
 </div>
+-->
 <!-- End of popup -->
 <!-- InstanceEndEditable -->
 
@@ -554,6 +564,13 @@ function outsideClick(e) {
 })();
 </script>
 <!-- End of confetti -->
+<script src="javaScript/jquery.rwdImageMaps.js"></script>
+<script src="javaScript/jquery.rwdImageMaps.min.js"></script>
+<script>
+	$(document).ready(function(e) {
+		$('img[usemap]').rwdImageMaps();
+	});
+</script>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
