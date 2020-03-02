@@ -276,3 +276,15 @@ canvas {
 .frameheight{
 	height: calc(88vh - 95px) !important;
 }
+
+/* Start of Alert loading */
+.alert {
+	padding: 20px;
+	background-color: hsla(0,0%,0%,0.00);
+	color: black;
+	margin-bottom: 15px;
+}
+.loadingwords {
+	margin: auto;
+}
+/* End of Alert loading */

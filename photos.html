@@ -127,8 +127,22 @@
 	</p>
 	<!-- 以上係option -->
 	</div>
-	<div class="container">
-		<iframe id="youriframe" width="100%" frameborder="0" class="frameheight" style="background-color:rgba(0,0,0,0.00);"></iframe>	</div>
+	<div class="alert center" id="alertbox" style="position: absolute; width: 100%; top:30%; height: 20%; display: none;">
+		<div class="loadingwords">
+				<img src="images/spinner.gif">
+		</div>
+	</div>
+	<script>
+		function show() {
+			document.getElementById("alertbox").style.display = "block";
+		}
+		function noshow() {
+			document.getElementById("alertbox").style.display = "none";
+		}
+	</script>
+	<div class="container center">
+		<iframe id="youriframe" width="100%" frameborder="0" class="frameheight" style="background-color:rgba(0,0,0,0.00);" onload="noshow()"></iframe>
+	</div>
 	<!-- InstanceEndEditable -->
 
 <!-- Start of Bootstrap javaScript -->
