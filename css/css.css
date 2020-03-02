@@ -288,3 +288,11 @@ canvas {
 	margin: auto;
 }
 /* End of Alert loading */
+
+/* Start of scrollframe */
+.scrollframe {
+	height: 600px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+/* End of scrollframe */
