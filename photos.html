@@ -132,17 +132,19 @@
 				<img src="images/spinner.gif">
 		</div>
 	</div>
-	<script>
-		function show() {
-			document.getElementById("alertbox").style.display = "block";
-		}
-		function noshow() {
-			document.getElementById("alertbox").style.display = "none";
-		}
-	</script>
 	<div class="container center">
 		<iframe id="youriframe" width="100%" frameborder="0" class="frameheight" style="background-color:rgba(0,0,0,0.00);" onload="noshow()"></iframe>
 	</div>
+	<script>
+		function show() {
+			document.getElementById("alertbox").style.display = "block";
+			document.getElementById("youriframe").style.display = "none";
+		}
+		function noshow() {
+			document.getElementById("alertbox").style.display = "none";
+			document.getElementById("youriframe").style.display = "block";
+		}
+	</script>
 	<!-- InstanceEndEditable -->
 
 <!-- Start of Bootstrap javaScript -->
