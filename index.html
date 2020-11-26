@@ -112,7 +112,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 center timefromaday">
-				<span id="timefromaday"></span>
+				<span id="timefromaday"></span><br>
+				<span id="howmanymonth"></span>
 			</div>
 		</div>
 		<div class="row">
@@ -300,6 +301,7 @@
 <!-- End of popup -->
 <!-- InstanceEndEditable -->
 
+<!-- InstanceBeginEditable name="content3" -->
 <!-- Start of Moment count time Script -->
 <script>
 moment.locale("zh-hk"); //change to Hong Kong Time
@@ -307,10 +309,27 @@ var now = moment(new Date()); //todays date
 var end = moment("2018-12-27"); // another date
 var duration = moment.duration(now.diff(end));
 var days = duration.asDays();
+
+function monthDiff(dateFrom, dateTo) { // Count month
+	return dateTo.getMonth() - dateFrom.getMonth() + 
+		(12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+}
+
+var d = new Date();
+var togethermonth = monthDiff(new Date(2018, 12), new Date());
+var strMonth = "即係第 ";
+var strMonth2 = " 個月";
+if (d.getDate() == 27) {
+	togethermonth++;
+	strMonth = "今日係第 ";
+	strMonth2 = " 個月紀念日";
+}
+
 document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已經 "+Math.ceil(days)+" 天";
+document.getElementById("howmanymonth").innerHTML = strMonth + togethermonth + strMonth2;
+
 </script>
 <!-- End of Moment count time Script -->
-<!-- InstanceBeginEditable name="content3" -->
 <!-- Start of popup script -->
 <script>
 // Get DOM Elements
