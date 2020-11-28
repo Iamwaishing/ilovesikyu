@@ -309,7 +309,7 @@ var now = moment(new Date()); //todays date
 var end = moment("2018-12-27"); // another date
 var duration = moment.duration(now.diff(end));
 var days = duration.asDays();
-
+/**
 function monthDiff(dateFrom, dateTo) { // Count month
 	x = dateTo.getMonth() + 1 - dateFrom.getMonth() + (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
 	if (dateFrom.getDate() > dateTo.getDate()) {
@@ -317,11 +317,13 @@ function monthDiff(dateFrom, dateTo) { // Count month
 	}
 	return x;
 }
-
+**/
 var d = new Date();
-var togethermonth = monthDiff(new Date(2018,12,27), new Date());
+//var togethermonth = monthDiff(new Date(2018,12,27), new Date());
+var togethermonth = parseInt(moment.duration(moment(new Date()).diff(moment("2018-12-27"))).asMonths());
 var strMonth = "即係第 ";
 var strMonth2 = " 個月";
+
 if (d.getDate() == 27) {
 	strMonth = "今日係第 ";
 	strMonth2 = " 個月紀念日";
