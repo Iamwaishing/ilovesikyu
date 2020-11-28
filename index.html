@@ -326,7 +326,12 @@ if (d.getDate() == 27) {
 	strMonth = "今日係第 ";
 	strMonth2 = " 個月紀念日";
 }
-document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已經 "+Math.ceil(days)+" 天";
+if (d.getDate() == 27 && d.getMonth() == 12) {
+	togethermonth = parseInt(moment.duration(moment(new Date()).diff(moment("2018-12-27"))).asYears());
+	strMonth = "今日係 ";
+	strMonth2 = " 周年紀念日";
+}
+document.getElementById("timefromaday").innerHTML = "偉誠同悉瑜係一齊已經 "+Math.ceil(days)+" 日";
 document.getElementById("howmanymonth").innerHTML = strMonth + togethermonth + strMonth2;
 
 </script>
