@@ -111,6 +111,13 @@
 						 /*15*/"https://drive.google.com/embeddedfolderview?id=1PrBLrskJMKFaVCwJBRNo0-xhZ177K11x#grid|2020年11月15日 跑步日",
 						 /*16*/"https://drive.google.com/embeddedfolderview?id=10GZPVMf5EWPRXLlCevRFe1OdVSEw5gOX#grid|2020年11月27日 二十三個月去尖沙咀",
 						 /*17*/"https://drive.google.com/embeddedfolderview?id=1Bjc_OtariOv_tVpr9Pa78aKUlOBS5euc#grid|2020年12月7日 去沙田買野食野",
+						 /*18*/"https://drive.google.com/embeddedfolderview?id=1fhUk5Jjc3Xid00YL5wyAA-1Zzl_s2Dip#grid|2020年12月24日 平安夜",
+						 /*19*/"https://drive.google.com/embeddedfolderview?id=19c_kOfEJzBkpds9IsJ0jVNcnu-0-enT7#grid|2020年12月26日 住帝景酒店",
+						 /*20*/"https://drive.google.com/embeddedfolderview?id=1ymQY4_eHKVenNAhvPyMrvi3abhrvhg7u#grid|2020年12月27日 兩周年",
+						];
+			} else if(s1.value == "2021"){
+				var optionArray = 
+						[/*01*/"https://drive.google.com/embeddedfolderview?id=1h4ylZ9lpdahblPWBpo6vNQtt22kuWu5X#grid|2021年1月3日 尖沙咀搵銀包",
 						];
 			}
 			var newOption1 = document.createElement("option");
@@ -135,6 +142,7 @@
 			<option value="2018">2018</option>
 			<option value="2019">2019</option>
 			<option value="2020">2020</option>
+			<option value="2021">2021</option>
 		</select>
 		<select id="slct2" name="slct2" onchange="document.getElementById('youriframe').src = this.options[this.selectedIndex].value;show()" hidden></select>
 	</p>
