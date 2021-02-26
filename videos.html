@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icon-72x72.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/icon-72x72.png" type="image/x-icon">
+    <meta name="theme-color" content="#FAD1BD">
+    <!-- Start of Script and CSS -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icon-72x72.png">
+    <script src="./script/jquery-3.5.1.js"></script>
+    <script src="./script/moment-with-locales.js"></script>
+    <link href="./style/style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./style/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- End of Script and CSS -->
+    <title>偉誠和悉瑜 - 影片</title>
+</head>
+<body>
+    <div id="header"></div>
+
+    <!-- Content Start Here -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1">
+				<!-- Text here -->
+			</div>
+			<div class="col-md-5 center">
+				<div style="background: #FFFFFF;">
+					<img src="images/livevid.png" alt="img" style="width: 100%">
+					<div class="noscrollframe"> <!-- 到時改返做 scrollframe-->
+						<div class="iframe-container">
+							<iframe name="youtube" src="https://www.youtube.com/embed/w0u1FWi5ARA" width="100%" height="30%" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<br>
+					</div>
+				</div>
+				<br>
+			</div>
+			<div class="col-md-5 center">
+				<div style="background:#FFFFFF;">
+					<img src="images/streetvid.png" alt="img" style="width: 100%">
+					<div class="noscrollframe">
+						<div class="iframe-container">
+							<iframe name="youtube" src="https://www.youtube.com/embed/B8M8TJnlkK4" width="100%" height="30%" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<br>
+					</div>
+				</div>
+				<br>
+			</div>
+			<div class="col-md-1">
+				<!-- Text here -->
+			</div>
+		</div>
+	</div>
+    <!-- Content End Here -->
+
+    <script>
+        // Start of Get header nav bar
+        const xhr = new XMLHttpRequest();
+        const header = document.getElementById("header");
+
+        xhr.onload = function() {
+            if (this.status === 200) {
+                header.innerHTML = xhr.responseText;
+            } else {
+                header.warn("Not 200 is OK");
+            }
+        };
+
+        xhr.open("get", "header.html");
+        xhr.send();
+        // End of Get header nav bar
+
+        // Start of Nav bar Script
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-toggle').toggleClass('active')
+                $('.navbars').toggleClass('active')
+            })
+        })
+        // End of Nav bar Script
+    </script>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>

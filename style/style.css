@@ -1,4 +1,10 @@
 body {
+	background-image: url("../images/bg.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
 	font-family: '微軟正黑體'!important;
 }
 
@@ -10,6 +16,30 @@ body {
 	font-weight: bold;
 	font-size: 30px;
 }
+
+.center {
+	text-align: center;
+}
+
+.frameheight{
+	height: calc(88vh - 95px) !important;
+}
+
+/* Start of youtube player */
+.iframe-container{
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%; 
+	height: 0;
+}
+.iframe-container iframe{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* End of youtube player */
 
 /* Start of Nav bar css */
 header {
@@ -117,10 +147,6 @@ nav ul li a:hover {
 }
 /* End of Nav bar css */
 
-.center {
-	text-align: center;
-}
-
 /* Start of jssor slider css */
 .jssorl-009-spin img {
 	animation-name: jssorl-009-spin;
@@ -138,7 +164,6 @@ nav ul li a:hover {
 		transform: rotate(360deg);
 	}
 }
-
 
 .jssorb052 .i {position:absolute;cursor:pointer;}
 .jssorb052 .i .b {fill:#000;fill-opacity:0.3;}
@@ -160,122 +185,6 @@ nav ul li a:hover {
 	transform: rotate(90deg);
 }
 /* End of jssor slider css */
-
-/* Start of popup css */
-:root {
-	--modal-duration: 1s;
-	--modal-color: #428bca;
-}
-
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-	margin: 5% auto!important;
-	width: 60%!important;
-	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17)!important;
-	animation-name: modalopen!important;
-	animation-duration: var(--modal-duration)!important;
-	height: 70vh!important;
-}
-
-.modal-body {
-	padding: 0px !important;
-	background-image: url("../images/bg2.jpg");
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-color: #464646;
-}
-
-.close {
-	color: #ccc;
-	float: right;
-	font-size: 60px!important;
-	color: #fff;
-}
-
-.close:hover,
-.close:focus {
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.popuptop {
-	z-index: 1!important;
-	position: absolute!important;
-	width: 100%!important;
-}
-
-.popupclose {
-	z-index: 2!important;
-	position: absolute!important;
-	width: 100%!important;
-}
-
-@keyframes modalopen {
-	from {
-		opacity: 0;
-  }
-	to {
-		opacity: 1;
-	}
-}
-
-@media (max-width: 769px) {
-	.modal-content {
-		margin: 5% 5%!important;
-		width: 90%!important;
-	}
-	
-	.popupimg {
-		width: 60%;
-	}
-}
-/* End of popup css */
-
-/* Start of confetti css */
-canvas {
-	display: block;
-	z-index: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.confettiheight {
-	height: 100%;
-}
-/* End of confetti css */
-
-/* Start of youtube player */
-.iframe-container{
-	position: relative;
-	width: 100%;
-	padding-bottom: 56.25%; 
-	height: 0;
-}
-.iframe-container iframe{
-	position: absolute;
-	top:0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-/* End of youtube player */
-.frameheight{
-	height: calc(88vh - 95px) !important;
-}
 
 /* Start of Alert loading */
 .alert {

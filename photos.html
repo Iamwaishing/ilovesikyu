@@ -1,166 +1,172 @@
-<!doctype html>
-<html><!-- InstanceBegin template="/Templates/layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="Content-Language" content="zh-TW">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/titleicon.png" type="image/gif">
-<link rel="stylesheet" href="css/css.css" type="text/css">
-<script src="javaScript/script.js" type="text/javascript"></script>
-<!-- Backgroung image css -->
-<link rel="stylesheet" href="css/responsive-full-background-image.css">
-<!-- Nav bar css -->
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<!-- Bootstrap css-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<!-- Moment javaScript -->
-<script src="javaScript/moment-with-locales.js" type="text/javascript"></script>
-<!-- Confetti Script -->
-<script src="jquery-git.js"></script>
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>偉誠和悉瑜 - 相片</title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icon-72x72.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/icon-72x72.png" type="image/x-icon">
+    <meta name="theme-color" content="#FAD1BD">
+    <!-- Start of Script and CSS -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icon-72x72.png">
+    <script src="./script/jquery-3.5.1.js"></script>
+    <script src="./script/moment-with-locales.js"></script>
+    <link href="./style/style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./style/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- End of Script and CSS -->
+    <title>偉誠和悉瑜 - 相片</title>
 </head>
-
 <body>
-	<header>
-		<a href="index.html" class="logo"><img src="images/icon.png" alt="icon" width="170px"></a>
-		<div class="menu-toggle"></div>
-		<nav class="navbars" id="nav">
-			<ul>
-				<li><a href="https://docs.google.com/spreadsheets/u/0/preview?id=1foTYWpBAVUf2yrQZmrdPjuNkvdwe2QcsBx9VriIfzbY" target="_blank">&nbsp;</a></li>
-				<li><a href="index.html">主頁</a></li>
-				<li><a href="photos.html">相片</a></li>
-				<li><a href="video.html">影片</a></li>
-			</ul>
-		</nav>
-		<div class="clearfix"></div>
-	</header>
-	<!-- InstanceBeginEditable name="content4" -->
-	<!-- InstanceEndEditable -->
-	<!-- InstanceBeginEditable name="content" -->
+    <div id="header"></div>
 	<div style="text-align: center;">
-	<!-- 以下係option -->
-	<script>
-		function populate(s1,s2){
-			var s1 = document.getElementById(s1);
-			var s2 = document.getElementById(s2);
-			s2.innerHTML = "";
-			if(s1.value == "2018"){
-				var optionArray = 
-						[/*01*/"https://drive.google.com/embeddedfolderview?id=1qAY3rxRSXeaVT8qEWPuYb3pgqowfKIyC#grid|2018年12月24日 平安夜約會",
-						 /*02*/"https://drive.google.com/embeddedfolderview?id=14bOcHWseUZqXtKWMOs9uppiypFuANpAm#grid|2018年12月27日 第一日",
-						 /*03*/"https://drive.google.com/embeddedfolderview?id=1dDdl2mifuHuBrmKw6pNbplZY-HYX39Ia#grid|2018年12月31日 奧海城倒數"
-						];
-			} else if(s1.value == "2019"){
-				var optionArray = 
-						[/*01*/"https://drive.google.com/embeddedfolderview?id=1oiJ_m2aByU8k48XytEtIZgfVvIjoC59E#grid|2019年1月9日 赤柱",
-						 /*02*/"https://drive.google.com/embeddedfolderview?id=1yeRoy0DQj20-0bcKFsrGXhJupst-7CuA#grid|2019年1月13日 嘉頓山",
-						 /*03*/"https://drive.google.com/embeddedfolderview?id=1teoMpaYymC94t0Unptdov-jKrTVwM000#grid|2019年1月23日 跑完步見",
-						 /*04*/"https://drive.google.com/embeddedfolderview?id=1-sNkgto36j0drCdZHDHDMO0ZUpJVocyC#grid|2019年1月27日 一個月",
-						 /*05*/"https://drive.google.com/embeddedfolderview?id=16sCHLGXCl0il-sZJNJb7zYWJnr3fl6DH#grid|2019年2月6日 行灣仔峽道&睇煙花",
-						 /*06*/"https://drive.google.com/embeddedfolderview?id=1C2Gv2hlHtb3dNslJQnw4gzAaGclDlUla#grid|2019年2月7日 智選假日酒店",
-						 /*07*/"https://drive.google.com/embeddedfolderview?id=1SbIuWpYEOPBurGOXMKOQNZYvAVsN2Ehv#grid|2019年2月9日 旺角影貼紙相",
-						 /*08*/"https://drive.google.com/embeddedfolderview?id=1OGQIJxAkILl-gklXRNJNAd-iljVOzv4I#grid|2019年2月14日 情人節佐敦谷野餐",
-						 /*09*/"https://drive.google.com/embeddedfolderview?id=1ZQ_WZ_zX0lDPxLKLvtwD4xy3RK5Y_FVJ#grid|2019年2月15日 佢生日食自助餐",
-						 /*10*/"https://drive.google.com/embeddedfolderview?id=1WRk9_fpxfQqHdQ3gqbCiksNVpoLq3vqo#grid|2019年3月3日 悉瑜屋企過夜",
-						 /*11*/"https://drive.google.com/embeddedfolderview?id=1OokWCB7SRokHa_0rdFXFq-R8fjukyQSr#grid|2019年3月27日 三個月去長洲",
-						 /*12*/"https://drive.google.com/embeddedfolderview?id=1gtPc0aQ0U-FtBYjPCHcIbv4M9bBXc7G3#grid|2019年4月10日 冇去跑步去見寶寶",
-						 /*13*/"https://drive.google.com/embeddedfolderview?id=1l1bDYfB_oZdmr_yr441y9z-rXZhhvpVR#grid|2019年5月9日 考完試見寶寶",
-						 /*14*/"https://drive.google.com/embeddedfolderview?id=1_um6pX2E9QS_4uvbytHnMlsvsvphpX4O#grid|2019年5月22日 澳門一日遊",
-						 /*15*/"https://drive.google.com/embeddedfolderview?id=1SBEVUqkXmW0FRXBew-WVovMZSQrPGNrD#grid|2019年7月1日 浪漫此刻@祝福閣",
-						 /*16*/"https://drive.google.com/embeddedfolderview?id=1e5MpDe2VQlOgesdHDJQ7xvswYHyEVRbu#grid|2019年7月27日 七個月食放題",
-						 /*17*/"https://drive.google.com/embeddedfolderview?id=1BzHlQx3tQ6MJvbF8dOh_GMVotDzYQYMY#grid|2019年8月18日 維園集會",
-						 /*18*/"https://drive.google.com/embeddedfolderview?id=1YxIWsA5I3NK751bM4-xxlCHDojX3s73Z#grid|2019年8月21日 嚟我屋企食飯",
-						 /*19*/"https://drive.google.com/embeddedfolderview?id=1QnL3MJyb2eL3HauOAR_pSfmvd0lmpIjh#grid|2019年8月24日 沙田馬場返工",
-						 /*20*/"https://drive.google.com/embeddedfolderview?id=1Qb_5uZwMZlTvTTke2qK7sPthUPnxcvKd#grid|2019年8月27日 八個月單車遊",
-						 /*21*/"https://drive.google.com/embeddedfolderview?id=1j3ytEh7WGzFCOuypgnh2EBOb0uoVpcJT#grid|2019年9月1日 佢屋企過夜之後一日",
-						 /*22*/"https://drive.google.com/embeddedfolderview?id=1HYv7wUY3wM7BSPgKdp30QlzMnxRu72YU#grid|2019年9月8日 提早送生日禮物",
-						 /*23*/"https://drive.google.com/embeddedfolderview?id=1wYXMsZo-Pwna1YDAPbIigirzP1_-sLU4#grid|2019年9月10日 我生日食自助餐",
-						 /*24*/"https://drive.google.com/embeddedfolderview?id=1j3T5CHiluyLrIb2YuITR9z-_IqcVGFix#grid|2019年9月15日 去銅鑼灣行街",
-						 /*25*/"https://drive.google.com/embeddedfolderview?id=1DkdzBHBZsMJHrqDET3Yf9Bv8Qst_6u6V#grid|2019年9月25日 我剪頭髮後合照",
-						 /*26*/"https://drive.google.com/embeddedfolderview?id=1ElbzdQzg8pXBiGqmzYK0l50hUbvsQUzq#grid|2019年9月27日 九個月慶祝",
-						 /*27*/"https://drive.google.com/embeddedfolderview?id=1LeYVP6yBuihUKrOupuBRjncvUfzxNyGF#grid|2019年10月20日 3日2夜陪悉瑜",
-						 /*28*/"https://drive.google.com/embeddedfolderview?id=1NCQ0QbYR1PU5_AGPHCZAQpxTu1Axozuk#grid|2019年10月27日 十個月",
-						 /*29*/"https://drive.google.com/embeddedfolderview?id=1NKHHv08ouVKY3NZfn0k3hQ49vmc_Eu8X#grid|2019年11月16日 我剪髮後拍攝",
-						 /*30*/"https://drive.google.com/embeddedfolderview?id=1_3n58gFhlUfkrPJDRs-27UPITbTWsTBm#grid|2019年11月24日 區議會投票日",
-						 /*31*/"https://drive.google.com/embeddedfolderview?id=15YGZZEvnAXyiPMReSqMf-bgGN1Xy3Sxl#grid|2019年12月23日 悉瑜整證件",
-						 /*32*/"https://drive.google.com/embeddedfolderview?id=1Qf73szKYBSMvP32cvKO0VC0nVCvz3Pb4#grid|2019年12月24日 平安夜",
-						 /*33*/"https://drive.google.com/embeddedfolderview?id=1MPoRpUjy7q64wsz6jaR0UFxMtYb0t_oh#grid|2019年12月25日 聖誕節",
-						 /*34*/"https://drive.google.com/embeddedfolderview?id=1NCoN0tlKQjI01RTG9_J3lX7X-Suzmown#grid|2019年12月27日 一周年",
-						 /*35*/"https://drive.google.com/embeddedfolderview?id=1Ga_q5gHIsUkih1rVKrfoJQS59goB7rDt#grid|2019年12月31日 旺角倒數"
-						];
-			} else if(s1.value == "2020"){
-				var optionArray = 
-						[/*01*/"https://drive.google.com/embeddedfolderview?id=1aJwBxHF2D1_GMoBWagfD_Dyx0mW3ZJ8F#grid|2020年1月1日 元旦日",
-						 /*02*/"https://drive.google.com/embeddedfolderview?id=1XNm-r3WtL6z1yKdglNi7yADdDav09D-y#grid|2020年1月10日 我行去大埔搵佢",
-						 /*03*/"https://drive.google.com/embeddedfolderview?id=1_G9xz1A4xBMnMKluffY5sL3-cL9F3lO1#grid|2020年2月14日 情人節",
-						 /*04*/"https://drive.google.com/embeddedfolderview?id=1enIfvtA1n4kluNuZIvJ8R4lFRofqEcr4#grid|2020年2月15日 寶寶生日",
-						 /*05*/"https://drive.google.com/embeddedfolderview?id=1YavxsVgkJSDWkx4qHor8qmFVzLCAL5Ja#grid|2020年2月16日 悉瑜屋企過夜",
-						 /*06*/"https://drive.google.com/embeddedfolderview?id=1bllGVPrdbVvAGCqFOPad6xalqVp_qg_P#grid|2020年3月5日 同Cody玩",
-						 /*07*/"https://drive.google.com/embeddedfolderview?id=1lcygzHNp-bHYZXgdpveRdCMr-IYPvXTE#grid|2020年4月27日 十六個月食漢堡包",
-						 /*08*/"https://drive.google.com/embeddedfolderview?id=10EIuLMCe1eFQqqWO7cUTttis3GV3J6vp#grid|2020年6月12日 志明橋",
-						 /*09*/"https://drive.google.com/embeddedfolderview?id=1S_hQpM-zgdiTuQ9fI9PQZ_g0XSt5nuIB#grid|2020年6月22至25日 尖沙咀皇悅酒店",
-						 /*10*/"https://drive.google.com/embeddedfolderview?id=1HX9lKLllrR8fIxY48MvSF574gpox-f7R#grid|2020年7月14日 寶寶陪我睇牙",
-						 /*11*/"https://drive.google.com/embeddedfolderview?id=1xlHPk_EGMJClcDO-2l55T6huRFEd5cJC#grid|2020年8月15至16日 瑞生嘉威酒店",
-						 /*12*/"https://drive.google.com/embeddedfolderview?id=1pGuTnh9KaEid709VBMD48azoErZWTh-1#grid|2020年9月10日 寶寶同我慶祝生日",
-						 /*13*/"https://drive.google.com/embeddedfolderview?id=19zQ3V4DxqDNyx0juXVud_oE0QW_WEXez#grid|2020年10月11日 去黃埔食野買野",
-						 /*14*/"https://drive.google.com/embeddedfolderview?id=1zDxAbfq1DY7FdZuExE-aWBSM_ay4FkGL#grid|2020年11月10日 行去尖沙咀行街",
-						 /*15*/"https://drive.google.com/embeddedfolderview?id=1PrBLrskJMKFaVCwJBRNo0-xhZ177K11x#grid|2020年11月15日 跑步日",
-						 /*16*/"https://drive.google.com/embeddedfolderview?id=10GZPVMf5EWPRXLlCevRFe1OdVSEw5gOX#grid|2020年11月27日 二十三個月去尖沙咀",
-						 /*17*/"https://drive.google.com/embeddedfolderview?id=1Bjc_OtariOv_tVpr9Pa78aKUlOBS5euc#grid|2020年12月7日 去沙田買野食野",
-						 /*18*/"https://drive.google.com/embeddedfolderview?id=1fhUk5Jjc3Xid00YL5wyAA-1Zzl_s2Dip#grid|2020年12月24日 平安夜",
-						 /*19*/"https://drive.google.com/embeddedfolderview?id=19c_kOfEJzBkpds9IsJ0jVNcnu-0-enT7#grid|2020年12月26日 住帝景酒店",
-						 /*20*/"https://drive.google.com/embeddedfolderview?id=1ymQY4_eHKVenNAhvPyMrvi3abhrvhg7u#grid|2020年12月27日 兩周年",
-						];
-			} else if(s1.value == "2021"){
-				var optionArray = 
-						[/*01*/"https://drive.google.com/embeddedfolderview?id=1h4ylZ9lpdahblPWBpo6vNQtt22kuWu5X#grid|2021年1月3日 尖沙咀搵銀包",
-						 /*02*/"https://drive.google.com/embeddedfolderview?id=1wOf0goobREoFHMmGKpb2EVayy8fKLF8f#grid|2021年2月14日 情人節",
-						 /*03*/"https://drive.google.com/embeddedfolderview?id=1XJL5Mh2Zv4reQbzbWIa4m01-eS5vc4D-#grid|2021年2月15日 寶寶生日住逸東酒店",
-						 /*04*/"https://drive.google.com/embeddedfolderview?id=12fk56p5pj3cQwCuXiL0MNPoMoGamQXkT#grid|2021年2月25日 日常",
-						];
-			}
-			var newOption1 = document.createElement("option");
-			newOption1.value = "";
-			newOption1.innerHTML = "日期";
-			newOption1.disabled = "disabled";
-			newOption1.selected = "selected";
-			newOption1.hidden = "hidden";
-			s2.options.add(newOption1);
-			for(var option in optionArray){
-				var pair = optionArray[option].split("|");
-				var newOption = document.createElement("option");
-				newOption.value = pair[0];
-				newOption.innerHTML = pair[1];
-				s2.options.add(newOption);
-			}
-	}
-	</script>
-	<p>
-		<select id="slct1" name="slct1" onchange="populate(this.id,'slct2');document.getElementById('slct2').hidden = false">
-			<option disabled selected hidden>年份</option>
-			<option value="2018">2018</option>
-			<option value="2019">2019</option>
-			<option value="2020">2020</option>
-			<option value="2021">2021</option>
-		</select>
-		<select id="slct2" name="slct2" onchange="document.getElementById('youriframe').src = this.options[this.selectedIndex].value;show()" hidden></select>
-	</p>
-	<!-- 以上係option -->
-	</div>
-	<div class="alert center" id="alertbox" style="position: absolute; width: 100%; top:30%; height: 20%; display: none;">
-		<div class="loadingwords">
-				<img src="images/spinner.gif" alt="spinner">
-		</div>
-	</div>
-	<div class="container center">
-		<iframe id="youriframe" width="100%" frameborder="0" class="frameheight" style="background-color:rgba(0,0,0,0.00);" onload="noshow()"></iframe>
-	</div>
-	<script>
-		function show() {
+        <!-- 以下係option -->
+        <script>
+            function populate(s1,s2){
+                var s1 = document.getElementById(s1);
+                var s2 = document.getElementById(s2);
+                s2.innerHTML = "";
+                if(s1.value == "2018"){
+                    var optionArray = 
+                            [/*01*/"https://drive.google.com/embeddedfolderview?id=1qAY3rxRSXeaVT8qEWPuYb3pgqowfKIyC#grid|2018年12月24日 平安夜約會",
+                             /*02*/"https://drive.google.com/embeddedfolderview?id=14bOcHWseUZqXtKWMOs9uppiypFuANpAm#grid|2018年12月27日 第一日",
+                             /*03*/"https://drive.google.com/embeddedfolderview?id=1dDdl2mifuHuBrmKw6pNbplZY-HYX39Ia#grid|2018年12月31日 奧海城倒數"
+                            ];
+                } else if(s1.value == "2019"){
+                    var optionArray = 
+                            [/*01*/"https://drive.google.com/embeddedfolderview?id=1oiJ_m2aByU8k48XytEtIZgfVvIjoC59E#grid|2019年1月9日 赤柱",
+                             /*02*/"https://drive.google.com/embeddedfolderview?id=1yeRoy0DQj20-0bcKFsrGXhJupst-7CuA#grid|2019年1月13日 嘉頓山",
+                             /*03*/"https://drive.google.com/embeddedfolderview?id=1teoMpaYymC94t0Unptdov-jKrTVwM000#grid|2019年1月23日 跑完步見",
+                             /*04*/"https://drive.google.com/embeddedfolderview?id=1-sNkgto36j0drCdZHDHDMO0ZUpJVocyC#grid|2019年1月27日 一個月",
+                             /*05*/"https://drive.google.com/embeddedfolderview?id=16sCHLGXCl0il-sZJNJb7zYWJnr3fl6DH#grid|2019年2月6日 行灣仔峽道&睇煙花",
+                             /*06*/"https://drive.google.com/embeddedfolderview?id=1C2Gv2hlHtb3dNslJQnw4gzAaGclDlUla#grid|2019年2月7日 智選假日酒店",
+                             /*07*/"https://drive.google.com/embeddedfolderview?id=1SbIuWpYEOPBurGOXMKOQNZYvAVsN2Ehv#grid|2019年2月9日 旺角影貼紙相",
+                             /*08*/"https://drive.google.com/embeddedfolderview?id=1OGQIJxAkILl-gklXRNJNAd-iljVOzv4I#grid|2019年2月14日 情人節佐敦谷野餐",
+                             /*09*/"https://drive.google.com/embeddedfolderview?id=1ZQ_WZ_zX0lDPxLKLvtwD4xy3RK5Y_FVJ#grid|2019年2月15日 佢生日食自助餐",
+                             /*10*/"https://drive.google.com/embeddedfolderview?id=1WRk9_fpxfQqHdQ3gqbCiksNVpoLq3vqo#grid|2019年3月3日 悉瑜屋企過夜",
+                             /*11*/"https://drive.google.com/embeddedfolderview?id=1OokWCB7SRokHa_0rdFXFq-R8fjukyQSr#grid|2019年3月27日 三個月去長洲",
+                             /*12*/"https://drive.google.com/embeddedfolderview?id=1gtPc0aQ0U-FtBYjPCHcIbv4M9bBXc7G3#grid|2019年4月10日 冇去跑步去見寶寶",
+                             /*13*/"https://drive.google.com/embeddedfolderview?id=1l1bDYfB_oZdmr_yr441y9z-rXZhhvpVR#grid|2019年5月9日 考完試見寶寶",
+                             /*14*/"https://drive.google.com/embeddedfolderview?id=1_um6pX2E9QS_4uvbytHnMlsvsvphpX4O#grid|2019年5月22日 澳門一日遊",
+                             /*15*/"https://drive.google.com/embeddedfolderview?id=1SBEVUqkXmW0FRXBew-WVovMZSQrPGNrD#grid|2019年7月1日 浪漫此刻@祝福閣",
+                             /*16*/"https://drive.google.com/embeddedfolderview?id=1e5MpDe2VQlOgesdHDJQ7xvswYHyEVRbu#grid|2019年7月27日 七個月食放題",
+                             /*17*/"https://drive.google.com/embeddedfolderview?id=1BzHlQx3tQ6MJvbF8dOh_GMVotDzYQYMY#grid|2019年8月18日 維園集會",
+                             /*18*/"https://drive.google.com/embeddedfolderview?id=1YxIWsA5I3NK751bM4-xxlCHDojX3s73Z#grid|2019年8月21日 嚟我屋企食飯",
+                             /*19*/"https://drive.google.com/embeddedfolderview?id=1QnL3MJyb2eL3HauOAR_pSfmvd0lmpIjh#grid|2019年8月24日 沙田馬場返工",
+                             /*20*/"https://drive.google.com/embeddedfolderview?id=1Qb_5uZwMZlTvTTke2qK7sPthUPnxcvKd#grid|2019年8月27日 八個月單車遊",
+                             /*21*/"https://drive.google.com/embeddedfolderview?id=1j3ytEh7WGzFCOuypgnh2EBOb0uoVpcJT#grid|2019年9月1日 佢屋企過夜之後一日",
+                             /*22*/"https://drive.google.com/embeddedfolderview?id=1HYv7wUY3wM7BSPgKdp30QlzMnxRu72YU#grid|2019年9月8日 提早送生日禮物",
+                             /*23*/"https://drive.google.com/embeddedfolderview?id=1wYXMsZo-Pwna1YDAPbIigirzP1_-sLU4#grid|2019年9月10日 我生日食自助餐",
+                             /*24*/"https://drive.google.com/embeddedfolderview?id=1j3T5CHiluyLrIb2YuITR9z-_IqcVGFix#grid|2019年9月15日 去銅鑼灣行街",
+                             /*25*/"https://drive.google.com/embeddedfolderview?id=1DkdzBHBZsMJHrqDET3Yf9Bv8Qst_6u6V#grid|2019年9月25日 我剪頭髮後合照",
+                             /*26*/"https://drive.google.com/embeddedfolderview?id=1ElbzdQzg8pXBiGqmzYK0l50hUbvsQUzq#grid|2019年9月27日 九個月慶祝",
+                             /*27*/"https://drive.google.com/embeddedfolderview?id=1LeYVP6yBuihUKrOupuBRjncvUfzxNyGF#grid|2019年10月20日 3日2夜陪悉瑜",
+                             /*28*/"https://drive.google.com/embeddedfolderview?id=1NCQ0QbYR1PU5_AGPHCZAQpxTu1Axozuk#grid|2019年10月27日 十個月",
+                             /*29*/"https://drive.google.com/embeddedfolderview?id=1NKHHv08ouVKY3NZfn0k3hQ49vmc_Eu8X#grid|2019年11月16日 我剪髮後拍攝",
+                             /*30*/"https://drive.google.com/embeddedfolderview?id=1_3n58gFhlUfkrPJDRs-27UPITbTWsTBm#grid|2019年11月24日 區議會投票日",
+                             /*31*/"https://drive.google.com/embeddedfolderview?id=15YGZZEvnAXyiPMReSqMf-bgGN1Xy3Sxl#grid|2019年12月23日 悉瑜整證件",
+                             /*32*/"https://drive.google.com/embeddedfolderview?id=1Qf73szKYBSMvP32cvKO0VC0nVCvz3Pb4#grid|2019年12月24日 平安夜",
+                             /*33*/"https://drive.google.com/embeddedfolderview?id=1MPoRpUjy7q64wsz6jaR0UFxMtYb0t_oh#grid|2019年12月25日 聖誕節",
+                             /*34*/"https://drive.google.com/embeddedfolderview?id=1NCoN0tlKQjI01RTG9_J3lX7X-Suzmown#grid|2019年12月27日 一周年",
+                             /*35*/"https://drive.google.com/embeddedfolderview?id=1Ga_q5gHIsUkih1rVKrfoJQS59goB7rDt#grid|2019年12月31日 旺角倒數"
+                            ];
+                } else if(s1.value == "2020"){
+                    var optionArray = 
+                            [/*01*/"https://drive.google.com/embeddedfolderview?id=1aJwBxHF2D1_GMoBWagfD_Dyx0mW3ZJ8F#grid|2020年1月1日 元旦日",
+                             /*02*/"https://drive.google.com/embeddedfolderview?id=1XNm-r3WtL6z1yKdglNi7yADdDav09D-y#grid|2020年1月10日 我行去大埔搵佢",
+                             /*03*/"https://drive.google.com/embeddedfolderview?id=1_G9xz1A4xBMnMKluffY5sL3-cL9F3lO1#grid|2020年2月14日 情人節",
+                             /*04*/"https://drive.google.com/embeddedfolderview?id=1enIfvtA1n4kluNuZIvJ8R4lFRofqEcr4#grid|2020年2月15日 寶寶生日",
+                             /*05*/"https://drive.google.com/embeddedfolderview?id=1YavxsVgkJSDWkx4qHor8qmFVzLCAL5Ja#grid|2020年2月16日 悉瑜屋企過夜",
+                             /*06*/"https://drive.google.com/embeddedfolderview?id=1bllGVPrdbVvAGCqFOPad6xalqVp_qg_P#grid|2020年3月5日 同Cody玩",
+                             /*07*/"https://drive.google.com/embeddedfolderview?id=1lcygzHNp-bHYZXgdpveRdCMr-IYPvXTE#grid|2020年4月27日 十六個月食漢堡包",
+                             /*08*/"https://drive.google.com/embeddedfolderview?id=10EIuLMCe1eFQqqWO7cUTttis3GV3J6vp#grid|2020年6月12日 志明橋",
+                             /*09*/"https://drive.google.com/embeddedfolderview?id=1S_hQpM-zgdiTuQ9fI9PQZ_g0XSt5nuIB#grid|2020年6月22至25日 尖沙咀皇悅酒店",
+                             /*10*/"https://drive.google.com/embeddedfolderview?id=1HX9lKLllrR8fIxY48MvSF574gpox-f7R#grid|2020年7月14日 寶寶陪我睇牙",
+                             /*11*/"https://drive.google.com/embeddedfolderview?id=1xlHPk_EGMJClcDO-2l55T6huRFEd5cJC#grid|2020年8月15至16日 瑞生嘉威酒店",
+                             /*12*/"https://drive.google.com/embeddedfolderview?id=1pGuTnh9KaEid709VBMD48azoErZWTh-1#grid|2020年9月10日 寶寶同我慶祝生日",
+                             /*13*/"https://drive.google.com/embeddedfolderview?id=19zQ3V4DxqDNyx0juXVud_oE0QW_WEXez#grid|2020年10月11日 去黃埔食野買野",
+                             /*14*/"https://drive.google.com/embeddedfolderview?id=1zDxAbfq1DY7FdZuExE-aWBSM_ay4FkGL#grid|2020年11月10日 行去尖沙咀行街",
+                             /*15*/"https://drive.google.com/embeddedfolderview?id=1PrBLrskJMKFaVCwJBRNo0-xhZ177K11x#grid|2020年11月15日 跑步日",
+                             /*16*/"https://drive.google.com/embeddedfolderview?id=10GZPVMf5EWPRXLlCevRFe1OdVSEw5gOX#grid|2020年11月27日 二十三個月去尖沙咀",
+                             /*17*/"https://drive.google.com/embeddedfolderview?id=1Bjc_OtariOv_tVpr9Pa78aKUlOBS5euc#grid|2020年12月7日 去沙田買野食野",
+                             /*18*/"https://drive.google.com/embeddedfolderview?id=1fhUk5Jjc3Xid00YL5wyAA-1Zzl_s2Dip#grid|2020年12月24日 平安夜",
+                             /*19*/"https://drive.google.com/embeddedfolderview?id=19c_kOfEJzBkpds9IsJ0jVNcnu-0-enT7#grid|2020年12月26日 住帝景酒店",
+                             /*20*/"https://drive.google.com/embeddedfolderview?id=1ymQY4_eHKVenNAhvPyMrvi3abhrvhg7u#grid|2020年12月27日 兩周年",
+                            ];
+                } else if(s1.value == "2021"){
+                    var optionArray = 
+                            [/*01*/"https://drive.google.com/embeddedfolderview?id=1h4ylZ9lpdahblPWBpo6vNQtt22kuWu5X#grid|2021年1月3日 尖沙咀搵銀包",
+                             /*02*/"https://drive.google.com/embeddedfolderview?id=1wOf0goobREoFHMmGKpb2EVayy8fKLF8f#grid|2021年2月14日 情人節",
+                             /*03*/"https://drive.google.com/embeddedfolderview?id=1XJL5Mh2Zv4reQbzbWIa4m01-eS5vc4D-#grid|2021年2月15日 寶寶生日住逸東酒店",
+                             /*04*/"https://drive.google.com/embeddedfolderview?id=12fk56p5pj3cQwCuXiL0MNPoMoGamQXkT#grid|2021年2月25日 日常",
+                            ];
+                }
+                var newOption1 = document.createElement("option");
+                newOption1.value = "";
+                newOption1.innerHTML = "日期";
+                newOption1.disabled = "disabled";
+                newOption1.selected = "selected";
+                newOption1.hidden = "hidden";
+                s2.options.add(newOption1);
+                for(var option in optionArray){
+                    var pair = optionArray[option].split("|");
+                    var newOption = document.createElement("option");
+                    newOption.value = pair[0];
+                    newOption.innerHTML = pair[1];
+                    s2.options.add(newOption);
+                }
+        }
+        </script>
+        <p>
+            <select id="slct1" name="slct1" onchange="populate(this.id,'slct2');document.getElementById('slct2').hidden = false">
+                <option disabled selected hidden>年份</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+            <select id="slct2" name="slct2" onchange="document.getElementById('youriframe').src = this.options[this.selectedIndex].value;show()" hidden></select>
+        </p>
+        <!-- 以上係option -->
+        </div>
+        <div class="alert center" id="alertbox" style="position: absolute; width: 100%; top:30%; height: 20%; display: none;">
+            <div class="loadingwords">
+                    <img src="images/spinner.gif" alt="spinner">
+            </div>
+        </div>
+        <div class="container center">
+            <iframe id="youriframe" width="100%" frameborder="0" class="frameheight" style="background-color:rgba(0,0,0,0.00);" onload="noshow()"></iframe>
+        </div>
+
+    <script>
+        // Start of Get header nav bar
+        const xhr = new XMLHttpRequest();
+        const header = document.getElementById("header");
+
+        xhr.onload = function() {
+            if (this.status === 200) {
+                header.innerHTML = xhr.responseText;
+            } else {
+                header.warn("Not 200 is OK");
+            }
+        };
+
+        xhr.open("get", "header.html");
+        xhr.send();
+        // End of Get header nav bar
+
+        // Start of Nav bar Script
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-toggle').toggleClass('active')
+                $('.navbars').toggleClass('active')
+            })
+        })
+        // End of Nav bar Script
+
+        // Start of frame
+        function show() {
 			document.getElementById("alertbox").style.display = "block";
 			document.getElementById("youriframe").style.display = "none";
 		}
@@ -168,30 +174,8 @@
 			document.getElementById("alertbox").style.display = "none";
 			document.getElementById("youriframe").style.display = "block";
 		}
-	</script>
-	<!-- InstanceEndEditable -->
-
-<!-- Start of Bootstrap javaScript -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<!-- End of Bootstrap javaScript -->
-
-<!-- Start of Nav bar Script -->
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('.menu-toggle').click(function() {
-			$('.menu-toggle').toggleClass('active')
-			$('.navbars').toggleClass('active')
-		})
-	})
-</script>
-<!-- End of Nav bar Script -->
-<!-- InstanceBeginEditable name="content2" -->
-<!-- InstanceEndEditable -->
-
-<!-- InstanceBeginEditable name="content3" -->
-<!-- InstanceEndEditable -->
+        // End of frame
+    </script>
+    <script src="./index.js" type="module"></script>
 </body>
-<!-- InstanceEnd --></html>
+</html>
