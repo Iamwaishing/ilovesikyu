@@ -31,7 +31,7 @@ self.addEventListener('install', e => {
 							"./images/spin.svg",
 							"./images/spinner.gif",
 							"./images/streetvid.png",
-							"./images/vid.png",
+							"./images/vid.png"
 							]);
 		})
 	);
