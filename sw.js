@@ -27,7 +27,7 @@ self.addEventListener('install', e => {
 							"./images/icon-512x512.png",
 							"./images/bg.jpg",
 							"./images/life.png",
-							"./images/lifevid.png",
+							"./images/livevid.png",
 							"./images/spin.svg",
 							"./images/spinner.gif",
 							"./images/streetvid.png",
