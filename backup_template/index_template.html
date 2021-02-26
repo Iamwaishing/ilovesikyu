@@ -24,6 +24,14 @@
         xhr.onload = function() {
             if (this.status === 200) {
                 header.innerHTML = xhr.responseText;
+				// Start of Nav bar Script
+				$(document).ready(function() {
+					$('.menu-toggle').click(function() {
+						$('.menu-toggle').toggleClass('active')
+						$('.navbars').toggleClass('active')
+					})
+				})
+				// End of Nav bar Script
             } else {
                 header.warn("Not 200 is OK");
             }
@@ -32,15 +40,6 @@
         xhr.open("get", "header.html");
         xhr.send();
         // End of Get header nav bar
-        
-        // Start of Nav bar Script
-        $(document).ready(function() {
-            $('.menu-toggle').click(function() {
-                $('.menu-toggle').toggleClass('active')
-                $('.navbars').toggleClass('active')
-            })
-        })
-        // End of Nav bar Script
 	</script>
     <title>偉誠和悉瑜 - 主頁</title>
 </head>
