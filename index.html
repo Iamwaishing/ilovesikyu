@@ -309,6 +309,8 @@ var now = moment(new Date()); //todays date
 var end = moment("2018-12-27"); // another date
 var duration = moment.duration(now.diff(end));
 var days = duration.asDays();
+console.log(now.year() + "年" + (now.month()+1) + "月" + now.date() + "日");
+var nowdate = now.year() + "-" + (now.month()+1) + "-" + now.date();
 /**
 function monthDiff(dateFrom, dateTo) { // Count month
 	x = dateTo.getMonth() + 1 - dateFrom.getMonth() + (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
@@ -320,7 +322,7 @@ function monthDiff(dateFrom, dateTo) { // Count month
 **/
 var d = new Date();
 //var togethermonth = monthDiff(new Date(2018,12,27), new Date());
-var togethermonth = parseInt(moment.duration(moment(new Date()).diff(moment("2018-12-28"))).asMonths());
+var togethermonth = parseInt(moment.duration(moment(nowdate).diff(moment("2018-12-28"))).asMonths());
 var strMonth = "即係第 ";
 var strMonth2 = " 個月";
 
@@ -329,7 +331,7 @@ if (d.getDate() == 27) {
 	strMonth2 = " 個月紀念日";
 }
 if (d.getDate() == 27 && d.getMonth() == 12) {
-	togethermonth = parseInt(moment.duration(moment(new Date()).diff(moment("2018-12-27"))).asYears());
+	togethermonth = parseInt(moment.duration(moment(nowdate).diff(moment("2018-12-27"))).asYears());
 	strMonth = "今日係 ";
 	strMonth2 = " 周年紀念日";
 }
