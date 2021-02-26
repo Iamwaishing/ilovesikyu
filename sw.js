@@ -3,7 +3,6 @@ self.addEventListener('install', e => {
 	e.waitUntil(
 		caches.open("love_v1").then(cache => {
 			return cache.addAll(["./",
-							"./header.html",
 							"./photos.html",
 							"./videos.html",
 							"./index.js",
