@@ -19,6 +19,22 @@
     <link href="./style/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- End of Script and CSS -->
 	<script>
+        // Start of Get header nav bar
+        const xhr = new XMLHttpRequest();
+        const header = document.getElementById("header");
+
+        xhr.onload = function() {
+            if (this.status === 200) {
+                header.innerHTML = xhr.responseText;
+            } else {
+                header.warn("Not 200 is OK");
+            }
+        };
+
+        xhr.open("get", "header.html");
+        xhr.send();
+        // End of Get header nav bar
+		
         // Start of Nav bar Script
         $(document).ready(function() {
             $('.menu-toggle').click(function() {
@@ -185,22 +201,6 @@
     <!-- End of Carousel -->
 
     <script>
-        // Start of Get header nav bar
-        const xhr = new XMLHttpRequest();
-        const header = document.getElementById("header");
-
-        xhr.onload = function() {
-            if (this.status === 200) {
-                header.innerHTML = xhr.responseText;
-            } else {
-                header.warn("Not 200 is OK");
-            }
-        };
-
-        xhr.open("get", "header.html");
-        xhr.send();
-        // End of Get header nav bar
-
         // Start of Moment Time
         moment.locale("zh-hk"); //change to Hong Kong Time
         var now = moment(new Date()); //todays date

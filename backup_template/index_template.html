@@ -16,16 +16,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./style/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- End of Script and CSS -->
-    <title>偉誠和悉瑜 - 主頁</title>
-</head>
-<body>
-    <div id="header"></div>
-
-    <!-- Content Start Here -->
-    This is index.html
-    <!-- Content End Here -->
-
-    <script>
+	<script>
         // Start of Get header nav bar
         const xhr = new XMLHttpRequest();
         const header = document.getElementById("header");
@@ -41,7 +32,7 @@
         xhr.open("get", "header.html");
         xhr.send();
         // End of Get header nav bar
-
+        
         // Start of Nav bar Script
         $(document).ready(function() {
             $('.menu-toggle').click(function() {
@@ -50,7 +41,15 @@
             })
         })
         // End of Nav bar Script
-    </script>
+	</script>
+    <title>偉誠和悉瑜 - 主頁</title>
+</head>
+<body>
+    <div id="header"></div>
+
+    <!-- Content Start Here -->
+    This is index.html
+    <!-- Content End Here -->
     <script src="./index.js" type="module"></script>
 </body>
 </html>
