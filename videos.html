@@ -16,36 +16,32 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./style/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- End of Script and CSS -->
-	<script>
-        // Start of Get header nav bar
-        const xhr = new XMLHttpRequest();
-        const header = document.getElementById("header");
-
-        xhr.onload = function() {
-            if (this.status === 200) {
-                header.innerHTML = xhr.responseText;
-				// Start of Nav bar Script
-				$(document).ready(function() {
-					$('.menu-toggle').click(function() {
-						$('.menu-toggle').toggleClass('active')
-						$('.navbars').toggleClass('active')
-					})
-				})
-				// End of Nav bar Script
-            } else {
-                header.warn("Not 200 is OK");
-            }
-        };
-
-        xhr.open("get", "header.html");
-        xhr.send();
-        // End of Get header nav bar
+	<script>    
+        // Start of Nav bar Script
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-toggle').toggleClass('active')
+                $('.navbars').toggleClass('active')
+            })
+        })
+        // End of Nav bar Script
 	</script>
     <title>偉誠和悉瑜 - 影片</title>
 </head>
 <body>
-    <div id="header"></div>
-
+    <header>
+        <a href="./" class="logo"><img src="./images/icon.png" alt="icon" width="170px"></a>
+        <div class="menu-toggle"></div>
+        <nav class="navbars" id="nav">
+            <ul>
+                <li><a href="https://docs.google.com/spreadsheets/u/0/preview?id=1foTYWpBAVUf2yrQZmrdPjuNkvdwe2QcsBx9VriIfzbY" target="_blank">&nbsp;</a></li>
+                <li><a href="./">主頁</a></li>
+                <li><a href="./photos">相片</a></li>
+                <li><a href="./videos">影片</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
     <!-- Content Start Here -->
 	<div class="container">
 		<div class="row">
