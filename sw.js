@@ -1,7 +1,7 @@
 // install cache
 self.addEventListener('install', e => {
 	e.waitUntil(
-		caches.open("love_v1").then(cache => {
+		caches.open("love_v2").then(cache => {
 			return cache.addAll(["./",
 							"./photos.html",
 							"./videos.html",
@@ -42,7 +42,7 @@ self.addEventListener('fetch', (event) => {
 	event.respondWith(
 	  caches.match(event.request).then((resp) => {
 		return resp || fetch(event.request).then((response) => {
-		  return caches.open('love_v1').then((cache) => {
+		  return caches.open('love_v2').then((cache) => {
 			cache.put(event.request, response.clone());
 			return response;
 		  });
@@ -53,7 +53,7 @@ self.addEventListener('fetch', (event) => {
 
 // update and delete old cache
 self.addEventListener('activate', (event) => {
-	var cacheKeeplist = ['love_v1'];
+	var cacheKeeplist = ['love_v2'];
   
 	event.waitUntil(
 	  caches.keys().then((keyList) => {
