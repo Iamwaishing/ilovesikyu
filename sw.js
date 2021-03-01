@@ -1,5 +1,12 @@
 const cacheName = 'love_v22';
 
+// auto update
+self.addEventListener('message', function (event) {
+	if (event.data.action == 'skipWaiting') {
+		self.skipWaiting()
+	}
+});
+
 // install cache
 self.addEventListener('install', e => {
 	e.waitUntil(
@@ -68,10 +75,3 @@ self.addEventListener('activate', (event) => {
 	  })
 	);
   });
-
-// auto update
-self.addEventListener('message', function (event) {
-	if (event.data.action == 'skipWaiting') {
-		self.skipWaiting()
-	}
-});
