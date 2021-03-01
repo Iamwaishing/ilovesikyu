@@ -34,7 +34,7 @@ self.addEventListener('install', e => {
 							"./images/spinner.gif",
 							"./images/streetvid.png",
 							"./images/vid.png"
-							]);
+							])+self.skipWaiting();
 							
 		})
 	);
