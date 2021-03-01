@@ -1,9 +1,15 @@
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('./sw.js').then(registration => {
-		console.log('Registration succeeded');
-		console.log(registration);
-	}).catch(error => {
-		console.log('Registration failed');
-		console.log(error);
-	});
+	navigator.serviceWorker.register('./sw.js').then(reg => {
+		reg.onupdatefound = () => {
+		  const installingWorker = reg.installing;
+		  installingWorker.onstatechange = () => {
+			if (installingWorker.state === 'installed' &&
+				navigator.serviceWorker.controller) {
+			  // Preferably, display a message asking the user to reload...
+			  alert('test');
+			  console.log('refresh please');
+			}
+		  };
+		};
+	  });
 }
