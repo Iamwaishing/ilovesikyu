@@ -6,7 +6,8 @@ if ('serviceWorker' in navigator) {
 			if (installingWorker.state === 'installed' &&
 				navigator.serviceWorker.controller) {
 			  // Preferably, display a message asking the user to reload...
-			  location.reload();
+			  alert('test');
+			  window.location.reload();
 			}
 		  };
 		};
