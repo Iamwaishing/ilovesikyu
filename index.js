@@ -6,6 +6,7 @@ if ('serviceWorker' in navigator) {
 			if (installingWorker.state === 'installed' &&
 				navigator.serviceWorker.controller) {
 			  // Preferably, display a message asking the user to reload...
+			  document.getElementById("snackbar").className = "show";
 			  console.log('refresh please');
 			}
 		  };
