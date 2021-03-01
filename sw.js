@@ -61,10 +61,10 @@ self.addEventListener('activate', (event) => {
 	  caches.keys().then((keyList) => {
 		return Promise.all(keyList.map((key) => {
 		  if (cacheKeeplist.indexOf(key) === -1) {
-			self.skipWaiting();
 			return caches.delete(key);
 		  }
 		}));
 	  })
 	);
+	self.skipWaiting();
   });
