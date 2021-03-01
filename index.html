@@ -40,11 +40,16 @@
 				<li><a href="./">主頁</a></li>
 				<li><a href="./photos">相片</a></li>
 				<li><a href="./videos">影片</a></li>
-				<li><a href="./activities">活動ssss</a></li>
+				<li><a href="./activities">活動</a></li>
 			</ul>
 		</nav>
 		<div class="clearfix"></div>
 	</header>
+	<div class="snackContainer">
+		<div id="snackbar">
+			有更新！<a class="snackCorss" onclick="window.location.reload();">撳呢度</a> 更新啦！<a style="margin-left: 10px;" onClick="this.parentNode.classList.remove('show');">&#10006;</a>
+		</div>
+	</div>
     <!-- Start of Carousel -->
     <script src="./script/jssor.slider-27.5.0.min.js" type="text/javascript"></script>
 	<div class="container">
@@ -229,10 +234,12 @@
         $(document).ready(function(e) {
             $('img[usemap]').rwdImageMaps();
         });
-		
-		function closeRefresh() {
-				document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "");
-		}
+		// snakebar
+		function showUpdate() {
+        	var x = document.getElementById("snackbar")
+        	x.className = "show";
+        	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 1000000);
+    	}
     </script>
     <script src="./index.js" type="module"></script>
 </body>

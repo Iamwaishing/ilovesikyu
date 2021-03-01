@@ -205,3 +205,62 @@ nav ul li a:hover {
 	overflow-y: auto;
 }
 /* End of scrollframe */
+
+/* Start of snackbar */
+.snackContainer {
+	display: flex;
+	justify-content: center;
+}
+#snackbar {
+	visibility: hidden;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	bottom: 30px;
+	width: fit-content;
+}
+
+#snackbar a {
+	text-decoration: none;
+	color: white;
+}
+
+.snackCorss {
+	text-decoration: underline!important;
+	color: dodgerblue!important;
+}
+
+#snackbar a:hover {
+	cursor: pointer;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 1.5s, fadeout 1000000s 1000000s;
+    animation: fadein 1.5s, fadeout 1000000s 1000000s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+/* End of snackbar */
