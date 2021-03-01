@@ -1,4 +1,4 @@
-const cacheName = 'love_v22';
+const cacheName = 'love_v222';
 
 // auto update
 self.addEventListener('message', function (event) {
