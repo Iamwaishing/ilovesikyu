@@ -234,10 +234,6 @@ nav ul li a:hover {
 	color: dodgerblue!important;
 }
 
-#snackbar a:hover {
-	cursor: pointer;
-}
-
 #snackbar.show {
     visibility: visible;
     -webkit-animation: fadein 1.5s, fadeout 1000000s 1000000s;
