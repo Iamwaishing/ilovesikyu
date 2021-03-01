@@ -1,4 +1,4 @@
-const cacheName = 'love_v6';
+const cacheName = 'love_v7';
 
 // install cache
 self.addEventListener('install', e => {
@@ -34,7 +34,7 @@ self.addEventListener('install', e => {
 							"./images/spinner.gif",
 							"./images/streetvid.png",
 							"./images/vid.png"
-							]) + alert('Refresh') + self.skipWaiting();
+							]) + self.skipWaiting();
 							
 		})
 	);
@@ -62,6 +62,7 @@ self.addEventListener('activate', (event) => {
 	  caches.keys().then((keyList) => {
 		return Promise.all(keyList.map((key) => {
 		  if (cacheKeeplist.indexOf(key) === -1) {
+			alert('Refresh');
 			return caches.delete(key);
 		  }
 		}));
