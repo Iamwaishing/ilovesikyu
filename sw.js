@@ -1,7 +1,9 @@
+const cacheName = 'love_v1';
+
 // install cache
 self.addEventListener('install', e => {
 	e.waitUntil(
-		caches.open("love_v2").then(cache => {
+		caches.open(cacheName).then(cache => {
 			return cache.addAll(["./",
 							"./photos.html",
 							"./videos.html",
@@ -42,7 +44,7 @@ self.addEventListener('fetch', (event) => {
 	event.respondWith(
 	  caches.match(event.request).then((resp) => {
 		return resp || fetch(event.request).then((response) => {
-		  return caches.open('love_v2').then((cache) => {
+		  return caches.open(cacheName).then((cache) => {
 			cache.put(event.request, response.clone());
 			return response;
 		  });
@@ -53,12 +55,13 @@ self.addEventListener('fetch', (event) => {
 
 // update and delete old cache
 self.addEventListener('activate', (event) => {
-	var cacheKeeplist = ['love_v2'];
+	var cacheKeeplist = [cacheName];
   
 	event.waitUntil(
 	  caches.keys().then((keyList) => {
 		return Promise.all(keyList.map((key) => {
 		  if (cacheKeeplist.indexOf(key) === -1) {
+			self.skipWaiting();
 			return caches.delete(key);
 		  }
 		}));
