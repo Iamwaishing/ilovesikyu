@@ -7,7 +7,7 @@ if ('serviceWorker' in navigator) {
 				navigator.serviceWorker.controller) {
 			  // Preferably, display a message asking the user to reload...
 			  alert('test');
-			  window.location.reload();
+			  console.log('refresh please');
 			}
 		  };
 		};
