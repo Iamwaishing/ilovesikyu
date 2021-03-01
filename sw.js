@@ -62,10 +62,13 @@ self.addEventListener('activate', (event) => {
 	  caches.keys().then((keyList) => {
 		return Promise.all(keyList.map((key) => {
 		  if (cacheKeeplist.indexOf(key) === -1) {
-			alert('Refresh');
 			return caches.delete(key);
 		  }
 		}));
 	  })
 	);
   });
+
+if (navigator.serviceWorker.controller) {
+	document.getElementById('notification').style.display = "block";
+}
