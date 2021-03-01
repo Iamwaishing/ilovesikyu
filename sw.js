@@ -1,4 +1,4 @@
-const cacheName = 'love_v5';
+const cacheName = 'love_v6';
 
 // install cache
 self.addEventListener('install', e => {
@@ -34,7 +34,7 @@ self.addEventListener('install', e => {
 							"./images/spinner.gif",
 							"./images/streetvid.png",
 							"./images/vid.png"
-							]) + self.skipWaiting();
+							]) + alert('Refresh') + self.skipWaiting();
 							
 		})
 	);
