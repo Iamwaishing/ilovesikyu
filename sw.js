@@ -1,4 +1,4 @@
-const cacheName = 'love_v2';
+const cacheName = 'love_v1';
 
 self.addEventListener('message', event => {
 	if (event.data.action == 'skipWaiting') {

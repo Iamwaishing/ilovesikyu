@@ -6,7 +6,6 @@ if ('serviceWorker' in navigator) {
 			if (installingWorker.state === 'installed' &&
 				navigator.serviceWorker.controller) {
 			  // Preferably, display a message asking the user to reload...
-			  alert('test');
 			  console.log('refresh please');
 			}
 		  };
