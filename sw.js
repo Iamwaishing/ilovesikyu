@@ -34,7 +34,7 @@ self.addEventListener('install', e => {
 							"./images/spinner.gif",
 							"./images/streetvid.png",
 							"./images/vid.png"
-							]) + skipWaiting();
+							]);
 							
 		})
 	);
@@ -68,3 +68,10 @@ self.addEventListener('activate', (event) => {
 	  })
 	);
   });
+
+// auto update
+self.addEventListener('message', function (event) {
+	if (event.data.action == 'skipWaiting') {
+		self.skipWaiting()
+	}
+})
