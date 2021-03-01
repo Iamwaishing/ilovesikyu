@@ -200,9 +200,9 @@ nav ul li a:hover {
 
 /* Start of scrollframe */
 .scrollframe {
-	height: 600px;
+	height: 80vh;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 /* End of scrollframe */
 
