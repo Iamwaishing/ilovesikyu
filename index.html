@@ -40,7 +40,7 @@
 				<li><a href="./">主頁</a></li>
 				<li><a href="./photos">相片</a></li>
 				<li><a href="./videos">影片</a></li>
-				<li><a href="./activities">活動test</a></li>
+				<li><a href="./activities">活動123</a></li>
 			</ul>
 		</nav>
 		<div class="clearfix"></div>
@@ -235,6 +235,22 @@
 				document.getElementById("snackbar").className = document.getElementById("snackbar").className.replace("show", "");
 		}
     </script>
-    <script src="./index.js" type="module"></script>
+    <script type="module">
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('./sw.js').then(reg => {
+			reg.onupdatefound = () => {
+				const installingWorker = reg.installing;
+				installingWorker.onstatechange = () => {
+				if (installingWorker.state === 'installed' &&
+					navigator.serviceWorker.controller) {
+					// Preferably, display a message asking the user to reload...
+					document.getElementById("snackbar").className = "show";
+					console.log('refresh please');
+				}
+				};
+			};
+		});
+	}
+	</script>
 </body>
 </html>
