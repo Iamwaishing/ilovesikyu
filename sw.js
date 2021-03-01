@@ -1,4 +1,4 @@
-const cacheName = 'love_v2';
+const cacheName = 'love_v1';
 
 // install cache
 self.addEventListener('install', e => {
@@ -34,7 +34,7 @@ self.addEventListener('install', e => {
 							"./images/spinner.gif",
 							"./images/streetvid.png",
 							"./images/vid.png"
-							]);
+							]) + skipWaiting();;
 							
 		})
 	);
@@ -67,10 +67,4 @@ self.addEventListener('activate', (event) => {
 		}));
 	  })
 	);
-  });
-
-  self.addEventListener('message', e => {
-	if (e.data === 'skipWaiting') {
-	  skipWaiting();
-	}
   });
