@@ -1,4 +1,4 @@
-const cacheName = 'love_v7';
+const cacheName = 'love_v8';
 
 // install cache
 self.addEventListener('install', e => {
@@ -68,7 +68,3 @@ self.addEventListener('activate', (event) => {
 	  })
 	);
   });
-
-if (navigator.serviceWorker.controller) {
-	document.getElementById('notification').style.display = "block";
-}

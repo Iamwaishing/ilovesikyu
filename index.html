@@ -230,6 +230,10 @@
         $(document).ready(function(e) {
             $('img[usemap]').rwdImageMaps();
         });
+
+		if (navigator.serviceWorker.controller) {
+			document.getElementById('notification').style.display = "block";
+		}
     </script>
     <script src="./index.js" type="module"></script>
 </body>
