@@ -1,5 +1,11 @@
 const cacheName = 'love_v1';
 
+self.addEventListener('message', event => {
+	if (event.data.action == 'skipWaiting') {
+	  self.skipWaiting();
+	}
+});
+
 // install cache
 self.addEventListener('install', e => {
 	e.waitUntil(
@@ -34,7 +40,7 @@ self.addEventListener('install', e => {
 							"./images/spinner.gif",
 							"./images/streetvid.png",
 							"./images/vid.png"
-							]) + self.skipWaiting();
+							]);
 							
 		})
 	);
