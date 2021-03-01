@@ -229,14 +229,6 @@
         $(document).ready(function(e) {
             $('img[usemap]').rwdImageMaps();
         });
-
-
-		// auto update cache
-		self.addEventListener('message', function (event) {
-			if (event.data.action === 'skipWaiting') {
-				self.skipWaiting();
-			}
-		});
     </script>
     <script src="./index.js" type="module"></script>
 </body>
