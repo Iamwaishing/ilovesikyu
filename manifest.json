@@ -8,6 +8,12 @@
     "short_name": "偉誠和悉瑜",
     "icons": [
       {
+        "src": "images/maskable_icon.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
         "src": "images/icon-72x72.png",
         "sizes": "72x72",
         "type": "image/png"

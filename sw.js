@@ -19,6 +19,7 @@ self.addEventListener('install', e => {
 							"./style/style.css",
 							"./style/bootstrap.min.css",
 							"./images/icon.png",
+							"./images/maskable_icon.png",
 							"./images/icon-72x72.png",
 							"./images/icon-96x96.png",
 							"./images/icon-128x128.png",
