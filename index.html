@@ -213,7 +213,7 @@
         var nowdate = now.year() + "-" + (now.month()+1) + "-" + now.date();
 
         var d = new Date();
-        var togethermonth = parseInt(moment.duration(moment(nowdate).diff(moment("2018-12-28"))).asMonths());
+        var togethermonth = parseInt(moment.duration(moment(nowdate).diff(moment("2018-12-26"))).asMonths());
         var strMonth = "即係第 ";
         var strMonth2 = " 個月";
 
@@ -222,7 +222,7 @@
             strMonth2 = " 個月紀念日";
         }
         if (d.getDate() == 27 && d.getMonth() == 12) {
-            togethermonth = parseInt(moment.duration(moment(nowdate).diff(moment("2018-12-27"))).asYears());
+            togethermonth = parseInt(moment.duration(moment(nowdate).diff(moment("2018-12-26"))).asYears());
             strMonth = "今日係 ";
             strMonth2 = " 周年紀念日";
         }
