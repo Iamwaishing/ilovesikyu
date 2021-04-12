@@ -14,7 +14,7 @@
         {
           "src": "images/icon-96x96.png",
           "type": "image/png",
-          "purpose": "maskable"
+          "sizes": "96x96"
         }
       ]
     },
@@ -25,7 +25,7 @@
         {
           "src": "images/icon-96x96.png",
           "type": "image/png",
-          "purpose": "maskable"
+          "sizes": "96x96"
         }
       ]
     },
@@ -36,7 +36,7 @@
         {
           "src": "images/icon-96x96.png",
           "type": "image/png",
-          "purpose": "maskable"
+          "sizes": "96x96"
         }
       ]
     }
