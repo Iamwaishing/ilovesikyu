@@ -9,15 +9,36 @@
   "shortcuts" : [
     {
       "name": "相片",
-      "url": "./photos"
+      "url": "./photos",
+      "icons": [
+        {
+          "src": "images/maskable_icon.png",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+      ]
     },
     {
       "name": "影片",
-      "url": "./videos"
+      "url": "./videos",
+      "icons": [
+        {
+          "src": "images/maskable_icon.png",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+      ]
     },
     {
       "name": "活動",
-      "url": "./avtivities"
+      "url": "./activities",
+      "icons": [
+        {
+          "src": "images/maskable_icon.png",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+      ]
     }
   ],
   "icons": [
