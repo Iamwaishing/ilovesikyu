@@ -12,7 +12,7 @@
       "url": "./photos",
       "icons": [
         {
-          "src": "images/maskable_icon.png",
+          "src": "images/icon-96x96.png",
           "type": "image/png",
           "purpose": "maskable"
         }
@@ -23,7 +23,7 @@
       "url": "./videos",
       "icons": [
         {
-          "src": "images/maskable_icon.png",
+          "src": "images/icon-96x96.png",
           "type": "image/png",
           "purpose": "maskable"
         }
@@ -34,7 +34,7 @@
       "url": "./activities",
       "icons": [
         {
-          "src": "images/maskable_icon.png",
+          "src": "images/icon-96x96.png",
           "type": "image/png",
           "purpose": "maskable"
         }
