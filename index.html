@@ -18,7 +18,14 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="./style/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- End of Script and CSS -->
-	<script>     
+	<script>
+		// snakebar
+		function showUpdate() {
+        	var x = document.getElementById("snackbar")
+        	x.className = "show";
+        	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 1000000);
+    	}
+		
         // Start of Nav bar Script
         $(document).ready(function() {
             $('.menu-toggle').click(function() {
@@ -47,7 +54,7 @@
 	</header>
 	<div class="snackContainer">
 		<div id="snackbar">
-			有更新！<a href="#" class="snackCorss" onclick="window.location.reload();">撳呢度</a> 更新啦！<a href="#" style="margin-left: 10px;" onClick="this.parentNode.classList.remove('show');">&#10006;</a>
+			有更新！<a href="#" class="snackCorss" onclick="window.location.reload();">撳呢度</a> 刷新頁面更新啦！<a href="#" style="margin-left: 10px;" onClick="this.parentNode.classList.remove('show');">&#10006;</a>
 		</div>
 	</div>
     <!-- Start of Carousel -->
@@ -234,12 +241,6 @@
         $(document).ready(function(e) {
             $('img[usemap]').rwdImageMaps();
         });
-		// snakebar
-		function showUpdate() {
-        	var x = document.getElementById("snackbar")
-        	x.className = "show";
-        	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 1000000);
-    	}
     </script>
     <script src="./index.js" type="module"></script>
 </body>

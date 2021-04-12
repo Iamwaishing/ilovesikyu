@@ -6,6 +6,20 @@
   "scope":".",
   "name": "偉誠和悉瑜",
   "short_name": "偉誠和悉瑜",
+  "shortcuts" : [
+    {
+      "name": "相片",
+      "url": "./photos"
+    },
+    {
+      "name": "影片",
+      "url": "./videos"
+    },
+    {
+      "name": "活動",
+      "url": "./avtivities"
+    }
+  ],
   "icons": [
     {
       "src": "images/maskable_icon.png",
